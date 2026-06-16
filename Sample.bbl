@@ -1,0 +1,243 @@
+\begin{thebibliography}{}
+
+\bibitem[Awagana et~al., 2009]{wold-4}
+Awagana, A., Wolff, H.~E., and Löhr, D. (2009).
+\newblock Hausa.
+\newblock In Haspelmath, M. and Tadmor, U., editors, {\em World Loanword
+  Database}. Max Planck Institute for Evolutionary Anthropology, Leipzig.
+
+\bibitem[Belth, 2024]{Belth2024}
+Belth, C. (2024).
+\newblock A learning-based account of phonological tiers.
+\newblock {\em Linguistic Inquiry}.
+
+\bibitem[Burness and McMullin, 2019]{BurnessMcMullin2019}
+Burness, P. and McMullin, K. (2019).
+\newblock Efficient learning of output tier-based strictly 2-local functions.
+\newblock In {\em Proceedings of the 16th Meeting on the Mathematics of
+  Language}, pages 78--90, Toronto, Canada. Association for Computational
+  Linguistics.
+
+\bibitem[Burness and McMullin, 2021]{burness-mcmullin-2021}
+Burness, P. and McMullin, K. (2021).
+\newblock More efficiently identifying the tiers of strictly 2-local tier-based
+  functions.
+\newblock In Bj{\"o}rklund, H. and Drewes, F., editors, {\em Proceedings of the
+  17th Meeting on the Mathematics of Language}, pages 38--49, Ume{\r{a}},
+  Sweden. Association for Computational Linguistics.
+
+\bibitem[Chandlee et~al., 2019]{chandleeBufia2019}
+Chandlee, J., Eyraud, R., Heinz, J., Jardine, A., and Rawski, J. (2019).
+\newblock Learning with partially ordered representations.
+\newblock In {\em Proceedings of the 16th Meeting on the Mathematics of
+  Language}, pages 91--101.
+
+\bibitem[Chandlee and Jardine, 2019]{chandleejardine19aisl}
+Chandlee, J. and Jardine, A. (2019).
+\newblock Autosegmental input-strictly local functions.
+\newblock {\em Transactions of the Association for Computational Linguistics},
+  7:157--168.
+
+\bibitem[Clements and Goldsmith, 2010]{clements2010autosegmental}
+Clements, G.~N. and Goldsmith, J. (2010).
+\newblock {\em Autosegmental studies in Bantu tone}, volume~3.
+\newblock Walter de Gruyter.
+
+\bibitem[Coleman and Local, 1991]{coleman1991no}
+Coleman, J. and Local, J. (1991).
+\newblock The ``{N}o {C}rossing {C}onstraint" in {A}utosegmental phonology.
+\newblock {\em Linguistics and Philosophy}, pages 295--338.
+
+\bibitem[Coleman and Pierrehumbert, 1997]{CP97}
+Coleman, J.~S. and Pierrehumbert, J. (1997).
+\newblock Stochastic phonological grammars and acceptability.
+\newblock In {\em Proceedings of the Third Meeting of the ACL Special Interest
+  Group in Computational Phonology}, pages 49--56. Somerset, NJ: Association
+  for Computational Linguistics.
+
+\bibitem[Cormen et~al., 2022]{CLRS2022}
+Cormen, T.~H., Leiserson, C.~E., Rivest, R.~L., and Stein, C. (2022).
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press, Cambridge, MA, 4 edition.
+
+\bibitem[De~Santo and Aks{\"e}nova, 2021]{de-santo-aksenova-2021-learning}
+De~Santo, A. and Aks{\"e}nova, A. (2021).
+\newblock Learning interactions of local and non-local phonotactic constraints
+  from positive input.
+\newblock In Ettinger, A., Pavlick, E., and Prickett, B., editors, {\em
+  Proceedings of the Society for Computation in Linguistics 2021}, pages
+  167--176, Online. Association for Computational Linguistics.
+
+\bibitem[Dwyer, 1978]{dwyerMende1978}
+Dwyer, D. (1978).
+\newblock What sort of tone language is {Mende}?
+\newblock {\em Studies in African Linguistics}, 9(2):167.
+
+\bibitem[Enderton, 2001]{enderton2001mathematical}
+Enderton, H.~B. (2001).
+\newblock {\em A Mathematical Introduction to Logic}.
+\newblock Elsevier.
+
+\bibitem[Goldsmith and Riggle, 2012]{goldsmith2012information}
+Goldsmith, J. and Riggle, J. (2012).
+\newblock Information theoretic approaches to phonological structure: the case
+  of finnish vowel harmony.
+\newblock {\em Natural Language \& Linguistic Theory}, 30(3):859--896.
+
+\bibitem[Goldsmith, 1976]{goldsmith1976autosegmental}
+Goldsmith, J.~A. (1976).
+\newblock {\em Autosegmental Phonology}.
+\newblock PhD thesis, MIT.
+
+\bibitem[Gouskova and Gallagher, 2020]{GouskovaGallagher2020}
+Gouskova, M. and Gallagher, G. (2020).
+\newblock Inducing nonlocal constraints from baseline phonotactics.
+\newblock {\em Natural Language and Linguistic Theory}, 38(1):77--116.
+
+\bibitem[Hayes and Wilson, 2008]{hayes2008maximum}
+Hayes, B. and Wilson, C. (2008).
+\newblock A maximum entropy model of phonotactics and phonotactic learning.
+\newblock {\em Linguistic Inquiry}, 39(3):379--440.
+
+\bibitem[Hyman, 1987]{hyman1987prosodic}
+Hyman, L.~M. (1987).
+\newblock Prosodic domains in {K}ukuya.
+\newblock {\em Natural Language \& Linguistic Theory}.
+
+\bibitem[Hyman, 2009]{hyman2009representation}
+Hyman, L.~M. (2009).
+\newblock The representation of tone.
+\newblock {\em UC Berkeley PhonLab Annual Report}, 5(5).
+
+\bibitem[Jardine, 2017]{jardine2017LocalNature}
+Jardine, A. (2017).
+\newblock The local nature of tone-association patterns.
+\newblock {\em Phonology}, 34(2):363--384.
+
+\bibitem[Jardine et~al., 2021]{jardineetal20qtheoryAP}
+Jardine, A., Danis, N., and Iacoponi, L. (2021).
+\newblock A formal investigation of {Q}-theory in comparison to autosegmental
+  representations.
+\newblock {\em Linguistic Inquiry}, 52(2):333--358.
+
+\bibitem[Jardine and Heinz, 2016]{Jardine-Heinz-2016-LTSLL}
+Jardine, A. and Heinz, J. (2016).
+\newblock Learning tier-based strictly 2-local languages.
+\newblock {\em Transactions of the Association for Computational Linguistics},
+  4:87--98.
+
+\bibitem[Jardine and McMullin, 2017]{jardinemcmullin17}
+Jardine, A. and McMullin, K. (2017).
+\newblock Efficient learning of tier-based strictly $k$-local languages.
+\newblock In Drewes, F., Mart\'in-Vide, C., and Truthe, B., editors, {\em
+  Language and Automata Theory and Applications, 11th International
+  Conference}, Lecture Notes in Computer Science, pages 64--76. Springer.
+
+\bibitem[Kornai, 2007]{kornai2007mathematical}
+Kornai, A. (2007).
+\newblock {\em Mathematical linguistics}.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Lambert, 2021]{pmlr-v153-lambert21a}
+Lambert, D. (2021).
+\newblock Grammar interpretations and learning tsl online.
+\newblock In Chandlee, J., Eyraud, R., Heinz, J., Jardine, A., and van Zaanen,
+  M., editors, {\em Proceedings of the Fifteenth International Conference on
+  Grammatical Inference}, volume 153 of {\em Proceedings of Machine Learning
+  Research}, pages 81--91. PMLR.
+
+\bibitem[Leben, 1971]{Leben}
+Leben, W.~R. (1971).
+\newblock {The morphophonemics of tone in Hausa}.
+\newblock In {\em Papers in African Linguistics}, pages 201--218.
+
+\bibitem[Leben, 1978]{lebenRepresentationTone1978}
+Leben, W.~R. (1978).
+\newblock The {{Representation}} of {{Tone}}.
+\newblock In Fromkin, V.~A., editor, {\em Tone}, pages 177--219. Academic
+  Press.
+
+\bibitem[Leben, 1996]{leben1996tonal}
+Leben, W.~R. (1996).
+\newblock Tonal feet and the adaptation of english borrowings into hausa.
+\newblock {\em Studies in African Linguistics}, 25(2):129--154.
+
+\bibitem[Leben, 2017]{leben2017tone}
+Leben, W.~R. (2017).
+\newblock Tone and length in mende.
+\newblock {\em UCLA Working Papers in Phonetics (Memorial volume for Russ
+  Schuh)}.
+
+\bibitem[Newman, 2002]{Newmanbook}
+Newman, P. (2002).
+\newblock {\em {The Hausa Language: An Encyclopedic Reference Grammar}}, volume
+  122.
+\newblock Yale University Press, New Haven, US.
+
+\bibitem[Oakden, 2020]{oakdenNotationalEquivalenceTonal2020}
+Oakden, C. (2020).
+\newblock Notational equivalence in tonal geometry.
+\newblock {\em Phonology}, 37(2):257--296.
+
+\bibitem[Odden, 2013]{oddenintroducing2013}
+Odden, D. (2013).
+\newblock {\em Introducing phonology}.
+\newblock Cambridge University Press.
+
+\bibitem[Rawski, 2021]{rawski2021structure}
+Rawski, J. (2021).
+\newblock {\em Structure and learning in natural language}.
+\newblock PhD thesis, State University of New York at Stony Brook.
+
+\bibitem[Rogers, 1998]{Rogers1998}
+Rogers, J. (1998).
+\newblock {\em A Descriptive Approach to Language-Theoretic Complexity}.
+\newblock CSLI Publications, Stanford, CA.
+
+\bibitem[Rogers et~al., 2013]{rogers2013}
+Rogers, J., Heinz, J., Fero, M., Hurst, J., Lambert, D., and Wibel, S. (2013).
+\newblock Cognitive and sub-regular complexity.
+\newblock {\em Lecture Notes in Computer Science}.
+
+\bibitem[Rogers and Lambert, 2019]{rogers.lambert2019mol}
+Rogers, J. and Lambert, D. (2019).
+\newblock Some classes of sets of structures definable without quantifiers.
+\newblock In {\em Proceedings of the 16th {Meeting} on the {Mathematics} of
+  {Language}}, pages 63--77, Toronto, Canada. Association for Computational
+  Linguistics.
+
+\bibitem[Strother-Garcia, 2019]{strother-garciaUsingModelTheory}
+Strother-Garcia, K. (2019).
+\newblock {\em Using Model Theory in Phonology: A Novel Characterization of
+  Syllable Structure and Syllabification}.
+\newblock PhD thesis, University of Delaware.
+
+\bibitem[Swanson, 2025]{Swanson2025}
+Swanson, L. (2025).
+\newblock Learning multi tier-based strictly 2-local languages.
+\newblock In {\em Proceedings of the 18th Meeting of the Mathematics of
+  Language}.
+\newblock Forthcoming.
+
+\bibitem[Swanson et~al., 2026]{Swanson+2025}
+Swanson, L., Heinz, J., and Rawski, J. (2026).
+\newblock Phonotactic learning with structure, not statistics.
+\newblock {\em Linguistic Inquiry}, pages 1--24.
+
+\bibitem[West et~al., 2001]{west2001introduction}
+West, D.~B. et~al. (2001).
+\newblock {\em Introduction to graph theory}, volume~2.
+\newblock Prentice hall Upper Saddle River.
+
+\bibitem[Wilson and Gallagher, 2018]{wilson2018accidental}
+Wilson, C. and Gallagher, G. (2018).
+\newblock Accidental gaps and surface-based phonotactic learning: A case study
+  of south bolivian quechua.
+\newblock {\em Linguistic Inquiry}, 49(3):610--623.
+
+\bibitem[Zoll, 2003]{zoll2003optimal}
+Zoll, C. (2003).
+\newblock Optimal tone mapping.
+\newblock {\em Linguistic Inquiry}, 34(2):225--268.
+
+\end{thebibliography}

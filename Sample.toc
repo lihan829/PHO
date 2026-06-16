@@ -1,0 +1,16 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {section}{\noexpand \hbox to\@tempdima {1.\hfil }Introduction}{1}{section.0.1}%
+\contentsline {section}{\noexpand \hbox to\@tempdima {2.\hfil }Learning Tonotactics}{3}{section.0.2}%
+\contentsline {subsection}{\numberline {2.1}Tonal Mapping Problem}{3}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {2.2}Learning Models}{6}{subsection.0.2.2}%
+\contentsline {section}{\noexpand \hbox to\@tempdima {3.\hfil }Preliminaries}{7}{section.0.3}%
+\contentsline {subsection}{\numberline {3.1}Strings Representations}{7}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {3.2}Autosegmental Representation as Graphs}{8}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {3.3}Structure Containment}{10}{subsection.0.3.3}%
+\contentsline {paragraph}{Competing interests}{11}{section*.3}%
+\contentsline {paragraph}{Acknowledgments}{11}{section*.4}%
+\contentsline {paragraph}{Funding statement}{11}{section*.5}%
+\contentsline {paragraph}{Data availability statement}{12}{section*.6}%
+\contentsline {paragraph}{Ethical standards}{12}{section*.7}%
+\contentsline {paragraph}{Author contributions}{12}{section*.8}%
+\contentsline {paragraph}{Supplementary material}{12}{section*.9}%
