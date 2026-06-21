@@ -3,46 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Sample.aux
 The style file: apalike.bst
 Database file #1: ref.bib
+Warning--empty publisher in chandlee2017computational
 Warning--empty publisher in Leben
-You've used 42 entries,
+Warning--can't use both volume and number fields in Mayer2021
+Warning--there's a number but no volume in TesarSmolensky1998
+You've used 80 entries,
             1935 wiz_defined-function locations,
-            733 strings with 10201 characters,
-and the built_in function-call counts, 16354 in all, are:
-= -- 1635
-> -- 539
-< -- 52
-+ -- 184
-- -- 166
-* -- 1253
-:= -- 2783
-add.period$ -- 136
-call.type$ -- 42
-change.case$ -- 274
-chr.to.int$ -- 42
-cite$ -- 43
-duplicate$ -- 716
-empty$ -- 1224
-format.name$ -- 237
-if$ -- 3315
-int.to.chr$ -- 1
+            939 strings with 15122 characters,
+and the built_in function-call counts, 30152 in all, are:
+= -- 3005
+> -- 938
+< -- 97
++ -- 320
+- -- 285
+* -- 2317
+:= -- 5150
+add.period$ -- 255
+call.type$ -- 80
+change.case$ -- 515
+chr.to.int$ -- 79
+cite$ -- 84
+duplicate$ -- 1325
+empty$ -- 2302
+format.name$ -- 418
+if$ -- 6095
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 47
-newline$ -- 214
-num.names$ -- 138
-pop$ -- 268
+missing$ -- 84
+newline$ -- 406
+num.names$ -- 259
+pop$ -- 484
 preamble$ -- 1
-purify$ -- 284
+purify$ -- 530
 quote$ -- 0
-skip$ -- 557
+skip$ -- 1014
 stack$ -- 0
-substring$ -- 1107
-swap$ -- 137
-text.length$ -- 16
+substring$ -- 2075
+swap$ -- 229
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 236
-warning$ -- 1
-while$ -- 147
+type$ -- 456
+warning$ -- 4
+while$ -- 264
 width$ -- 0
-write$ -- 559
-(There was 1 warning)
+write$ -- 1053
+(There were 4 warnings)

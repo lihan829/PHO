@@ -1,5 +1,15 @@
 \begin{thebibliography}{}
 
+\bibitem[Angluin, 1988]{Angluin88b}
+Angluin, D. (1988).
+\newblock Identifying languages from stochastic examples.
+\newblock Technical Report 614, Yale University, New Haven, CT.
+
+\bibitem[Angluin and Laird, 1988]{angluin88}
+Angluin, D. and Laird, P. (1988).
+\newblock Learning from noisy examples.
+\newblock {\em Machine Learning}, 2:343--370.
+
 \bibitem[Awagana et~al., 2009]{wold-4}
 Awagana, A., Wolff, H.~E., and Löhr, D. (2009).
 \newblock Hausa.
@@ -32,11 +42,22 @@ Chandlee, J., Eyraud, R., Heinz, J., Jardine, A., and Rawski, J. (2019).
 \newblock In {\em Proceedings of the 16th Meeting on the Mathematics of
   Language}, pages 91--101.
 
+\bibitem[Chandlee and Heinz, 2017]{chandlee2017computational}
+Chandlee, J. and Heinz, J. (2017).
+\newblock Computational phonology.
+\newblock In {\em Oxford Research Encyclopedia of Linguistics}.
+
 \bibitem[Chandlee and Jardine, 2019]{chandleejardine19aisl}
 Chandlee, J. and Jardine, A. (2019).
 \newblock Autosegmental input-strictly local functions.
 \newblock {\em Transactions of the Association for Computational Linguistics},
   7:157--168.
+
+\bibitem[Chandlee and Jardine, 2021]{chandleejardine21bmrs}
+Chandlee, J. and Jardine, A. (2021).
+\newblock Computational universals in linguistic theory: Using recursive
+  programs for phonological analysis.
+\newblock {\em Language}, 93:485--519.
 
 \bibitem[Clements and Goldsmith, 2010]{clements2010autosegmental}
 Clements, G.~N. and Goldsmith, J. (2010).
@@ -60,6 +81,11 @@ Cormen, T.~H., Leiserson, C.~E., Rivest, R.~L., and Stein, C. (2022).
 \newblock {\em Introduction to Algorithms}.
 \newblock MIT Press, Cambridge, MA, 4 edition.
 
+\bibitem[Dai, 2025]{Dai2025}
+Dai, H. (2025).
+\newblock An exception-filtering approach to phonotactic learning.
+\newblock {\em Phonology}, 42(1):e5.
+
 \bibitem[De~Santo and Aks{\"e}nova, 2021]{de-santo-aksenova-2021-learning}
 De~Santo, A. and Aks{\"e}nova, A. (2021).
 \newblock Learning interactions of local and non-local phonotactic constraints
@@ -67,6 +93,18 @@ De~Santo, A. and Aks{\"e}nova, A. (2021).
 \newblock In Ettinger, A., Pavlick, E., and Prickett, B., editors, {\em
   Proceedings of the Society for Computation in Linguistics 2021}, pages
   167--176, Online. Association for Computational Linguistics.
+
+\bibitem[Durvasula, 2020]{Durvasula2020}
+Durvasula, K. (2020).
+\newblock O gradience, whence do you come?
+\newblock In {\em Keynote at the 2020 Annual Meeting on Phonology}, Santa Cruz,
+  CA.
+
+\bibitem[Durvasula, 2025]{durvasula2025closer}
+Durvasula, K. (2025).
+\newblock A closer look at what/how we can learn from computational modelling
+  of phonotactics.
+\newblock Preprint, available at https://ling.auf.net/lingbuzz/007622.
 
 \bibitem[Dwyer, 1978]{dwyerMende1978}
 Dwyer, D. (1978).
@@ -89,15 +127,62 @@ Goldsmith, J.~A. (1976).
 \newblock {\em Autosegmental Phonology}.
 \newblock PhD thesis, MIT.
 
+\bibitem[Goodman, 1999]{goodman1999semiring}
+Goodman, J. (1999).
+\newblock Semiring parsing.
+\newblock {\em Computational Linguistics}, 25(4):573--606.
+
+\bibitem[Gorman, 2013]{Gorman2013}
+Gorman, K. (2013).
+\newblock {\em Generative phonotactics}.
+\newblock PhD thesis, University of Pennsylvania.
+
 \bibitem[Gouskova and Gallagher, 2020]{GouskovaGallagher2020}
 Gouskova, M. and Gallagher, G. (2020).
 \newblock Inducing nonlocal constraints from baseline phonotactics.
 \newblock {\em Natural Language and Linguistic Theory}, 38(1):77--116.
 
+\bibitem[Haspelmath and Tadmor, 2009]{wold}
+Haspelmath, M. and Tadmor, U., editors (2009).
+\newblock {\em WOLD}.
+\newblock Max Planck Institute for Evolutionary Anthropology, Leipzig.
+
 \bibitem[Hayes and Wilson, 2008]{hayes2008maximum}
 Hayes, B. and Wilson, C. (2008).
 \newblock A maximum entropy model of phonotactics and phonotactic learning.
 \newblock {\em Linguistic Inquiry}, 39(3):379--440.
+
+\bibitem[Heinz, 2009]{Heinz2009}
+Heinz, J. (2009).
+\newblock On the role of locality in learning stress patterns.
+\newblock {\em Phonology}, 26(2):303--351.
+
+\bibitem[Heinz, 2010]{Heinz2010}
+Heinz, J. (2010).
+\newblock Learning long-distance phonotactics.
+\newblock {\em Linguistic Inquiry}, 41(4):623--661.
+
+\bibitem[Heinz, 2011a]{Heinz-2011-CPF}
+Heinz, J. (2011a).
+\newblock Computational phonology part {I}: Foundations.
+\newblock {\em Language and Linguistics Compass}, 5(4):140--152.
+
+\bibitem[Heinz, 2011b]{Heinz-2011-CPGLF}
+Heinz, J. (2011b).
+\newblock Computational phonology part {II}: Grammars, learning, and the
+  future.
+\newblock {\em Language and Linguistics Compass}, 5(4):153--168.
+
+\bibitem[Heinz, 2018]{heinzComputationalNaturePhonological2018}
+Heinz, J. (2018).
+\newblock The computational nature of phonological generalizations.
+\newblock In Hyman, L.~M. and Plank, F., editors, {\em Phonological
+  {Typology}}, pages 126--195. De Gruyter.
+
+\bibitem[Heinz and Idsardi, 2017]{heinz2017computational}
+Heinz, J. and Idsardi, W.~J. (2017).
+\newblock Computational phonology today.
+\newblock {\em Phonology}, 34(2):211--219.
 
 \bibitem[Hyman, 1987]{hyman1987prosodic}
 Hyman, L.~M. (1987).
@@ -109,6 +194,11 @@ Hyman, L.~M. (2009).
 \newblock The representation of tone.
 \newblock {\em UC Berkeley PhonLab Annual Report}, 5(5).
 
+\bibitem[Inkelas and Cho, 1993]{inkelas1993inalterability}
+Inkelas, S. and Cho, Y.-m.~Y. (1993).
+\newblock Inalterability as prespecification.
+\newblock {\em Language}, pages 529--574.
+
 \bibitem[Jardine, 2017]{jardine2017LocalNature}
 Jardine, A. (2017).
 \newblock The local nature of tone-association patterns.
@@ -119,6 +209,12 @@ Jardine, A., Danis, N., and Iacoponi, L. (2021).
 \newblock A formal investigation of {Q}-theory in comparison to autosegmental
   representations.
 \newblock {\em Linguistic Inquiry}, 52(2):333--358.
+
+\bibitem[Jardine and Heinz, 2015]{jardine2015concatenation}
+Jardine, A. and Heinz, J. (2015).
+\newblock A concatenation operation to derive autosegmental graphs.
+\newblock In {\em Proceedings of the 14th Meeting on the Mathematics of
+  Language (MoL 2015)}, pages 139--151.
 
 \bibitem[Jardine and Heinz, 2016]{Jardine-Heinz-2016-LTSLL}
 Jardine, A. and Heinz, J. (2016).
@@ -133,10 +229,39 @@ Jardine, A. and McMullin, K. (2017).
   Language and Automata Theory and Applications, 11th International
   Conference}, Lecture Notes in Computer Science, pages 64--76. Springer.
 
+\bibitem[Kaelbling et~al., 2023]{Kaelbling+2023-RILIPD}
+Kaelbling, P., Lambert, D., and Heinz, J. (2023).
+\newblock Robust identification in the limit from incomplete positive data.
+\newblock In Fernau, H. and Jansen, K., editors, {\em Fundamentals of
+  Computation Theory}, volume 14292 of {\em Lecture Notes in Computer Science},
+  pages 276--290. Springer Nature Switzerland.
+
+\bibitem[Kahng and Durvasula, 2023]{kahng2023can}
+Kahng, J. and Durvasula, K. (2023).
+\newblock Can you judge what you don’t hear? perception as a source of
+  gradient wordlikeness judgements.
+\newblock {\em Glossa: a journal of general linguistics}, 8(1).
+
+\bibitem[Karttunen, 1998]{karttunen1998proper}
+Karttunen, L. (1998).
+\newblock The proper treatment of optimality in computational phonology.
+\newblock {\em arXiv preprint cmp-lg/9804002}.
+
+\bibitem[Kodner, 2016]{kodner2016}
+Kodner, J. (2016).
+\newblock {Simple Syllabify}.
+\newblock https://github.com/jkodner05/syllabify.
+
 \bibitem[Kornai, 2007]{kornai2007mathematical}
 Kornai, A. (2007).
 \newblock {\em Mathematical linguistics}.
 \newblock Springer Science \& Business Media.
+
+\bibitem[Kostyszyn and Heinz, 2022]{KostyszynHeinz2021}
+Kostyszyn, K. and Heinz, J. (2022).
+\newblock Categorical account of gradient acceptability of word-initial polish
+  onsets.
+\newblock In {\em Proceedings of the Annual Meeting on Phonology}.
 
 \bibitem[Lambert, 2021]{pmlr-v153-lambert21a}
 Lambert, D. (2021).
@@ -145,6 +270,17 @@ Lambert, D. (2021).
   M., editors, {\em Proceedings of the Fifteenth International Conference on
   Grammatical Inference}, volume 153 of {\em Proceedings of Machine Learning
   Research}, pages 81--91. PMLR.
+
+\bibitem[Lambert, 2025]{Lambert-2025}
+Lambert, D. (2025).
+\newblock Multitier phonotactics.
+\newblock {\em Phonology}.
+\newblock MS accepted for publication.
+
+\bibitem[Lambert et~al., 2021]{Lambert+2021-TESRL}
+Lambert, D., Rawski, J., and Heinz, J. (2021).
+\newblock Typology emerges from simplicity in representations and learning.
+\newblock {\em Journal of Language Modelling}, 9(1):151--194.
 
 \bibitem[Leben, 1971]{Leben}
 Leben, W.~R. (1971).
@@ -168,6 +304,23 @@ Leben, W.~R. (2017).
 \newblock {\em UCLA Working Papers in Phonetics (Memorial volume for Russ
   Schuh)}.
 
+\bibitem[Mayer, 2021]{Mayer2021}
+Mayer, C. (2021).
+\newblock Capturing gradience in long-distance phonology using probabilistic
+  tier-based strictly local grammars.
+\newblock In {\em Proceedings of the Society for Computation in Linguistics},
+  volume~4.
+
+\bibitem[Mayer, 2025]{mayerReconciling2025}
+Mayer, C. (2025).
+\newblock Reconciling categorical and gradient models of phonotactics.
+\newblock {\em Society for Computation in Linguistics}, 8(1).
+
+\bibitem[Meyers, 1997]{meyers1997ocp}
+Meyers, S. (1997).
+\newblock Ocp effects in optimality theory.
+\newblock {\em Natural Language \& Linguistic Theory}, 15(4):847--892.
+
 \bibitem[Newman, 2002]{Newmanbook}
 Newman, P. (2002).
 \newblock {\em {The Hausa Language: An Encyclopedic Reference Grammar}}, volume
@@ -183,6 +336,13 @@ Oakden, C. (2020).
 Odden, D. (2013).
 \newblock {\em Introducing phonology}.
 \newblock Cambridge University Press.
+
+\bibitem[Payne, 2024]{payne2024generalized}
+Payne, S. (2024).
+\newblock A generalized algorithm for learning positive and negative grammars
+  with unconventional string models.
+\newblock In {\em Proceedings of the Society for Computation in Linguistics
+  2024}, pages 75--85.
 
 \bibitem[Rawski, 2021]{rawski2021structure}
 Rawski, J. (2021).
@@ -206,6 +366,17 @@ Rogers, J. and Lambert, D. (2019).
   {Language}}, pages 63--77, Toronto, Canada. Association for Computational
   Linguistics.
 
+\bibitem[Simon, 1956]{Simon1956}
+Simon, H.~A. (1956).
+\newblock Rational choice and the structure of the environment.
+\newblock {\em Psychological Review}, 63(2):129--138.
+
+\bibitem[Smolensky et~al., 2014]{SmolenskyGoldrick2013}
+Smolensky, P., Goldrick, M., and Mathis, D. (2014).
+\newblock Optimization and quantization in gradient symbol systems: A framework
+  for integrating the continuous and the discrete in cognition.
+\newblock {\em Cognitive Science}, 38(6):1102--1138.
+
 \bibitem[Strother-Garcia, 2019]{strother-garciaUsingModelTheory}
 Strother-Garcia, K. (2019).
 \newblock {\em Using Model Theory in Phonology: A Novel Characterization of
@@ -224,6 +395,16 @@ Swanson, L., Heinz, J., and Rawski, J. (2026).
 \newblock Phonotactic learning with structure, not statistics.
 \newblock {\em Linguistic Inquiry}, pages 1--24.
 
+\bibitem[Tesar and Smolensky, 1998]{TesarSmolensky1998}
+Tesar, B. and Smolensky, P. (1998).
+\newblock Learnability in optimality theory.
+\newblock {\em Linguistic Inquiry}, (29):229--268.
+
+\bibitem[Tesar and Smolensky, 2000]{TesarSmolensky2000}
+Tesar, B. and Smolensky, P. (2000).
+\newblock {\em Learnability in {O}ptimality {T}heory}.
+\newblock MIT Press.
+
 \bibitem[West et~al., 2001]{west2001introduction}
 West, D.~B. et~al. (2001).
 \newblock {\em Introduction to graph theory}, volume~2.
@@ -234,6 +415,37 @@ Wilson, C. and Gallagher, G. (2018).
 \newblock Accidental gaps and surface-based phonotactic learning: A case study
   of south bolivian quechua.
 \newblock {\em Linguistic Inquiry}, 49(3):610--623.
+
+\bibitem[Wu and Heinz, 2023]{Wu-Heinz-2023-SELDNI}
+Wu, K. and Heinz, J. (2023).
+\newblock String extension learning despite noisy intrusions.
+\newblock In Coste, F., Ouardi, F., and Rabusseau, G., editors, {\em
+  Proceedings of 16th edition of the International Conference on Grammatical
+  Inference}, volume 217 of {\em Proceedings of Machine Learning Research},
+  pages 80--95. PMLR.
+
+\bibitem[Yang, 2013]{Yang2013}
+Yang, C. (2013).
+\newblock Who's afraid of george kingsley zipf? or: Do children and chimps have
+  language?
+\newblock {\em Significance}, 10(6):29--34.
+
+\bibitem[Yang, 2016]{Yang2016}
+Yang, C. (2016).
+\newblock {\em The Price of Productivity}.
+\newblock MIT Press.
+
+\bibitem[Yip, 2002]{yip2002tone}
+Yip, M. (2002).
+\newblock {\em Tone}.
+\newblock Cambridge University Press.
+
+\bibitem[Yolyan, 2025]{Yolyan2025}
+Yolyan, T. (2025).
+\newblock A framework for learning phonological maps as logical transductions.
+\newblock In {\em Proceedings of the 18th Meeting of the Mathematics of
+  Language}.
+\newblock Forthcoming.
 
 \bibitem[Zoll, 2003]{zoll2003optimal}
 Zoll, C. (2003).
