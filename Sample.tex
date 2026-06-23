@@ -55,7 +55,7 @@
 \usepackage{fontspec}
 \usepackage{textgreek}   
 \newcommand{\hijeff}[1]{\textcolor{red}{\textbf{[#1]}}}
-\newcommand{\kuo}[1]{(\ref{#1})}
+
 
 \begin{document}
 
@@ -587,7 +587,7 @@ Some of this background knowledge is well established in computer science
 only familiar with phonological theory. 
 
 \hijeff{I added the paragraph of math disclaimer back but
-Im just worried that this is what R3 asked us to remove...}
+ this is what R3 asked us to remove...}
 
 We note that Section~\ref{sec:prelim} and ~\ref{sec:bufiaar} are
 somewhat technical, and that researchers only interested in BUFIA-AR's
@@ -966,16 +966,71 @@ These definitions mean that $A$ is \textit{contained} in $B$ whenever
 there exists a subpart of $B$ onto which \(A\) projects via a function
 \(h\), and furthermore, that the relations that hold among elements of
 \(A\) hold among their corresponding elements in \(B\). For instance,
-the AR in Figure~\kuo{sec3.fig.restriction:a} is contained in the AR
-in \kuo{sec3.fig.restriction:b} because the dotted region in
-\kuo{sec3.fig.restriction:b} preserves all internal relations of
+the AR in Figure~\ref{fig.restriction:a} is contained in the AR
+in \ref{fig.restriction:b} because the dotted region in
+\ref{fig.restriction:b} preserves all internal relations of
 %:
-\kuo{sec3.fig.restriction:a}, despite the differences in the
+\ref{fig.restriction:a}, despite the differences in the
 indicing. In particular, $\mu_1, \mu_2, \sigma_1$ in
-\kuo{sec3.fig.restriction:a} project to $\mu_2, \mu_3, \sigma_2$ in
-\kuo{sec3.fig.restriction:b}, respectively.
+\ref{fig.restriction:a} project to $\mu_2, \mu_3, \sigma_2$ in
+\ref{fig.restriction:b}, respectively.
 
-%\input{sec3.fig.restriction}
+
+\begin{figure}[h]
+	\centering
+	\begin{minipage}[t]{0.32\textwidth}
+		
+		
+		\centering
+		\begin{tikzpicture}
+			\node (t2) at (1,1) {L};
+			
+			\node[anchor=base] (c1) at (1,0) {$\mu_1$};
+			\node[anchor=base] (c2) at (2,0) {$\mu_2$};
+			
+			\node (s2) at (1,-1) {$\sigma_1$};
+			\draw (t2) -- (c1) -- (s2);
+			\draw (t2) -- (c2) -- (s2);
+			
+		\end{tikzpicture} 
+		\subcaption{Heavy L syllable}
+		\label{fig.restriction:a}
+	\end{minipage}	
+	\begin{minipage}[t]{0.32\textwidth}
+		\begin{tikzpicture}
+			\node (t1) at (1,1) {H};
+			\node (t2) at (2,1) {L};
+			\node (t3) at (3,1) {H};
+			
+			\node[anchor=base] (c1) at (1,0) {$\mu_1$};
+			\node[thick, anchor=base] (c2) at (2,0) {$\mu_2$};
+			\node[thick, anchor=base] (c3) at (3,0) {$\mu_3$};
+			
+			\node (s1) at (1,-1) {$\sigma_1$};			
+			\node (s2) at (2,-1)  {$\sigma_2$};
+			\draw (t1) -- (c1) -- (s1);
+			\draw (t2) -- (c1) -- (s1);
+			\draw (t2) -- (c3) --(s2);
+			\draw  (t2) -- (c2) -- (s2);
+			\draw  (t3) -- (c3);
+			\draw[dotted, thick]
+			($(t2)+(-0.3,0.3)$) --
+			($(t2)+(0.2,0.3)$) --
+			($(c3)+(0.3,0.2)$) --
+			($(c3)+ (0.3,0.2) + (0,-0.45)$) --
+			($(s2)+(0.2,-0.3)$) --
+			($(s2)+(-0.3,-0.3)$) --
+			cycle;
+			
+			
+		\end{tikzpicture} 
+		\subcaption{AR containing a heavy L}
+		\label{fig.restriction:b}
+	\end{minipage}
+	\caption{A heavy L-toned syllable and a structure in which it is contained}
+	\label{fig.restriction}
+\end{figure}
+
 
 The containment relation is particularly important because it provides
 a natural \textit{ordering} over the space of possible structures. The
@@ -1263,14 +1318,8 @@ inconsistent tier projections, such as adding a mora to the tonal
 melody tier or line crossing, will be excluded. Some linguistically
 invalid expansion examples are shown in Figure~\ref{fig.invalid.AR}
 with dotted lines indicating impossible associations.
-
-\begin{figure}[ht]
+\begin{figure}
 	\centering
-	% --- First Subfigure ---
-	\hfill
-	% --- Second Subfigure ---
-	\begin{minipage}[t]{0.2\textwidth}
-		\centering
 		\begin{tikzpicture}
 			\node (s1) at (0,0) {$\sigma_1$};
 			\node (m1) at (0,1) {$\mu_1$};
@@ -1278,11 +1327,7 @@ with dotted lines indicating impossible associations.
 			\node (t2) at (1,2) {$\mu_2$};
 			\draw [-] (t1) to (m1) to (s1);
 			\draw[-, dotted] (t1) -- (t2); %node[midway] {$\times$};
-		\end{tikzpicture}\label{ar:sup1x}
-	\end{minipage}	\hfill
-	% --- Third Subfigure ---
-	\begin{minipage}[t]{0.2\textwidth}
-		\centering
+		\end{tikzpicture} \hfil
 		\begin{tikzpicture} 
 			\node (s1) at (0,0) {$\sigma_1$};
 			\node (m1) at (0,1) {$\mu_1$};
@@ -1290,10 +1335,7 @@ with dotted lines indicating impossible associations.
 			\node (m2) at (1,1) {L};
 			\draw [-] (t1) to (m1) to (s1);
 			\draw [-,thick, dotted] (m1) -- (m2); %node[midway] {$\times$};
-		\end{tikzpicture}\label{ar:sup2x}
-	\end{minipage}	\hfill
-	\begin{minipage}[t]{0.2\textwidth}
-		\centering
+		\end{tikzpicture} \hfil
 		\begin{tikzpicture} 
 			\node (s1) at (0,0) {$\sigma_1$};
 			\node (m1) at (0,1) {$\mu_1$};
@@ -1301,10 +1343,7 @@ with dotted lines indicating impossible associations.
 			\node (m2) at (0,-1) {L};
 			\draw [-] (t1) to (m1) to (s1);
 			\draw [-,thick, dotted] (s1) -- (m2); %node[midway] {$\times$};
-		\end{tikzpicture}\label{ar:sup3x}
-	\end{minipage}	\hfill
-	\begin{minipage}[t]{0.2\textwidth}
-		\centering
+		\end{tikzpicture}\hfil
 		\begin{tikzpicture} 
 			\node (s1) at (0.5,0) {$\sigma_1$};
 			\node (m1) at (0,1) {$\mu_1$};
@@ -1315,13 +1354,11 @@ with dotted lines indicating impossible associations.
 			\draw [-,thick, dotted] (t2) to (m1);
 			\draw [-] (s1) to (m2);
 			\draw [-] (s1) to (m1);
-		\end{tikzpicture}\label{ar:sup4x}
-	\end{minipage}	\hfill
-	
-	\caption{Invalid expansions}
+		\end{tikzpicture}
+		
+		\caption{Invalid AR Expansions}
 	\label{fig.invalid.AR}
 \end{figure}
-
 By computational efficiency, we aim to obtain distinct graphs while
 minimising redundant construction of identical structures. In many
 cases, the same resulting AR can be obtained via multiple expansion
@@ -1792,12 +1829,12 @@ stipulated some rules to reduce redundancy. Specific matrix patterns
 were shown to diagnose ill-formed structures. For example,
 Figure~\ref{fig.bad} illustrates three invalid ARs. An
 anti-diagonal (from upper right to lower left) of 1s marks a
-line-crossing violation \kuo{bad.assoc1}. A column or
+line-crossing violation \ref{bad.assoc1}. A column or
 row that is filled exclusively with zero indicates an unassociated tone or mora. Such zero-domination is
 problematic when it occurs between two columns or rows that contain
 associations, as this pattern indicates that an intervening unit has
 been skipped, resulting in an improper association formed across it
-(as in \kuo{bad.assoc2} and \kuo{bad.assoc3}) as they violate the
+(as in \ref{bad.assoc2} and \ref{bad.assoc3}) as they violate the
 WFC 1 and 2.
 
 \begin{figure}[ht]
@@ -1950,11 +1987,11 @@ a light HL contour is contained in a heavy HL syllable, and similarly
 that a light LH is contained in a heavy LH. Under this assumption, any
 language that allows a heavy contour would necessarily also allow the
 corresponding heavy contour. This is, however, not accurate. As shown
-in Table~\ref{sec3.tab.2typescontours}, Hausa accepts heavy HL but not
+in Table~\ref{tab.2typescontours}, Hausa accepts heavy HL but not
 light HL, whereas Mende accepts heavy LH but not light LH.
 
 In other words, the algorithm must be able to determine that none 
-of the structures in Table~\ref{sec3.tab.2typescontours} contains 
+of the structures in Table~\ref{tab.2typescontours} contains 
 one another. Containment between ARs is not determined solely 
 by tonal string matching or by the number of TBUs, which are 
 straightforward to verify (e.g., \textit{L} is contained in \textit{HLH}, 
@@ -2017,7 +2054,7 @@ temporal arrangement of autosegments) in one AR are fully preserved in another.
 		\bottomrule
 	\end{tabular}
 	\caption{Contour Inventory in Hausa and Mende}
-	\label{sec3.tab.2typescontours}
+	\label{tab.2typescontours}
 \end{table}
 
 
@@ -2117,37 +2154,6 @@ cannot bear contours. A bimoraic syllable can take an HL contour (each
 tone associates to one mora) but LH contours are not allowed. Lastly,
 Hausa does not have superheavy syllables, therefore monosyllabic
 three-tone contours are also not allowed.  
-
-\hijeff{the special letters won't show}
-\begin{table}[h!]
-	\centering
-	\renewcommand{\arraystretch}{2}
-	\begin{tabular}{lllll}
-		\hline
-		
-		\textbf{Monosyllabic} 
-		& \makecell{ɗáa \\ `son’} 
-		& \makecell{mèe \\ `what’} 
-		& \makecell{mâi \\ `oil’} 
-		
-		&  \\ \hline
-		\textbf{Disyllabic} 
-		& \makecell{ƙá.sáa \\ `land’} 
-		& \makecell{mù.tûm \\ `person’} 
-		& \makecell{tú.dùu \\ `hill’} 
-		& \makecell{màa.gée \\ `cat’}  \\
-		\hline
-		
-		\textbf{Trisyllabic} 
-		& \makecell{í.nú.wàa \\ `shadow’} 
-		& \makecell{ƙàn.ƙá.ráa \\ `ice/snow’} 
-		& \makecell{múu.jì.yáa \\ `owl'} 
-		& \makecell{fà.dá.màa\\ `swamp'} \\ \hline
-	\end{tabular}
-	\caption{Nonderived native Hausa words \citep{wold-4}}
-	\label{sec4.hausa.ex}
-\end{table}
-
 
 
 \citet[p.606]{Newmanbook} notes
@@ -2260,34 +2266,6 @@ data using string representations.
 
 
 
-% \begin{tikzpicture}
-	%     \node (bt1) at (-.4,0.8) {H};
-	%     \node (bt2) at (0.4,0.8) {L};
-	%     \node (bc1) at (-.4,0) {$\mu$};
-	%     \node (bc2) at (0,0) {$\mu$};
-	%     \node (bc3) at (0.4,0) {$\mu$};
-	%     \node (bs1) at (-0.4,-0.8) {$\sigma$};
-	%     \node (bs2) at (0,-0.8) {$\sigma$};
-	%     \node (bs3) at (0.4,-0.8) {$\sigma$};
-	%     \draw (bt1) -- (bc1) -- (bs1);
-	%     \draw (bt2) -- (bc2) -- (bs2);
-	%     \draw (bt2) -- (bc3) -- (bs3);
-	% \end{tikzpicture}
-% \hspace{1em}
-% \begin{tikzpicture}			
-	%     \node (bt1) at (-.4,0.8) {L};
-	%     \node (bt2) at (0.4,0.8) {H};
-	%     \node (bc1) at (-.4,0) {$\mu$};
-	%     \node (bc2) at (0,0) {$\mu$};
-	%     \node (bc3) at (0.4,0) {$\mu$};
-	%     \node (bs1) at (-0.4,-0.8) {$\sigma$};
-	%     \node (bs2) at (0,-0.8) {$\sigma$};
-	%     \node (bs3) at (0.4,-0.8) {$\sigma$};
-	%     \draw (bt1) -- (bc1) -- (bs1);
-	%     \draw (bt1) -- (bc2) -- (bs2);
-	%     \draw (bt2) -- (bc3) -- (bs3);
-	% \end{tikzpicture}
-
 
 \subsection{Experiment Setup}
 The data used for the current experiment comes from the Hausa dataset
@@ -2301,14 +2279,12 @@ Analysability. To ensure consistency with previous generalisations,
 which are based on canonical, non-derived tonal patterns,
 we restrict our dataset to monomorphemic words that are clearly 
 non-borrowed, and all others were filtered out. In addition, forms 
-containing glides (ƙw, ƙy, kw, ky, gw, gy) 
+%containing glides (ƙw, ƙy, kw, ky, gw, gy) 
 \hijeff{special letters won't show}
 were excluded to avoid 
 ambiguous syllabification and uncertain syllable weight.
 As a result, a total of 621 words transcribed in orthography
 remained and were stored in a .csv file.
-
-
 All orthographic forms were first syllabified \citep{kodner2016} then
 converted into its corresponding AR representation using the method
 described in \citet{jardine2015concatenation}. 
@@ -2318,38 +2294,33 @@ representation. After conversion and removal of duplicate ARs, 64
 distinct AR types were identified among the 621 words, which serve as
 the positive dataset on which BUFIA-AR operates.
 
-\hijeff{I want to remove the matrix-coding from the table}
+
 \begin{table}
 		\centering
-	\renewcommand\theadfont{\bfseries}
-	\renewcommand\arraystretch{1.2}
 	\begin{tabular}{>{\centering\arraybackslash}m{1cm} 
 			|>{\centering\arraybackslash}m{1cm} 
 			|>{\centering\arraybackslash}m{3.2cm} 
-			|>{\centering\arraybackslash}m{3cm} 
+			|>{\centering\arraybackslash}m{5cm}}
 \toprule
-		\textbf{Form} & Tones & \thead{AR Diagram}  & \thead{Matrix-based Coding} \\
+		\textbf{Form} & \textbf{Tones} & \textbf{AR Diagram}  & \textbf{Matrix-based Coding} \\
 		\hline
 		\makecell{\textit{k\`oo.g\'ii} \\  `river'}		& LH	&
 		\vspace{1em}
 		\begin{tikzpicture}
 			[scale=0.9, every node/.style={scale=0.9}]
 			\node (t1) at (2,1) {L};
-			\node (t2) at (3,1) {H};
-			
+			\node (t2) at (3,1) {H};			
 			\node[anchor=base] (c1) at (1,0) {$\mu_1$};
 			\node[anchor=base] (c2) at (2,0) {$\mu_2$};
 			\node[anchor=base] (c3) at (3,0) {$\mu_3$};
-			\node[anchor=base] (c4) at (4,0) {$\mu_4$};
-			
+			\node[anchor=base] (c4) at (4,0) {$\mu_4$};			
 			\node (s1) at (2,-1) {$\sigma_1$};
 			\node (s2) at (3,-1) {$\sigma_2$};
 			\draw (t1) -- (c1) -- (s1);
 			\draw (t1) -- (c2) -- (s1);
 			\draw (t2) -- (c3) -- (s2);
 			\draw (t2) -- (c4) -- (s2);
-		\end{tikzpicture} &
-		
+		\end{tikzpicture} &		
 		\makecell[c]{
 			%		\hspace{1em}\vspace{1em}	
 			%			\vspace{0.1cm}
@@ -2375,12 +2346,10 @@ the positive dataset on which BUFIA-AR operates.
 			[scale=0.9, every node/.style={scale=0.9}]
 			\node (t0) at (1,1) {L};
 			\node (t1) at (2,1) {H};
-			\node (t2) at (3,1) {L};
-			
+			\node (t2) at (3,1) {L};			
 			\node[anchor=base] (c1) at (1,0) {$\mu_1$};
 			\node[anchor=base] (c2) at (2,0) {$\mu_2$};
-			\node[anchor=base] (c3) at (3,0) {$\mu_3$};
-			
+			\node[anchor=base] (c3) at (3,0) {$\mu_3$};			
 			\node (s1) at (1,-1) {$\sigma_1$};
 			\node (s2) at (2.5,-1) {$\sigma_2$};
 			\draw (t0) -- (c1) -- (s1);
@@ -2408,8 +2377,6 @@ the positive dataset on which BUFIA-AR operates.
 	\label{sec4.tab.conversion}
 \end{table}
 
-
-
 We ran BUFIA-AR with the number of syllables,
 moras, and tones limited to a maximum of three. 
 The number three was chosen for two reasons. 
@@ -2421,18 +2388,13 @@ constraints. Second, we wanted to show that BUFIA-AR
 could return constraints with unassociated units, which 
 is a unique aspect of ARs as compared to linear 
 representations.
-
-
 \subsection{Evaluation}
-
 In this section, we provide two types of evaluation: 
 qualitative and quantitative. The qualitative evaluation examines how the grammar learned 
 by BUFIA-AR compares with the baseline grammar. The quantitative 
 evaluation uses $k$-fold cross-validation,
 a common method in machine learning for assessing 
 how well a predictive model generalises to unseen data. 
-
-
 \subsubsection{Qualitative Evaluation: Constraints Comparison}
 BUFIA-AR found 11 constraints when the numbers of 
 syllable, mora, and tone are limited to three. 
@@ -2441,26 +2403,24 @@ values $s,\mu$ and the number of tones are subsets
 of the 11 constraints in Table~\ref{tab.results}. 
 Cells with a dash indicate that no constraints were 
 found with those $s$ and $\mu$ sizes.  
-
 \renewcommand{\arraystretch}{1.6}
-
 \begin{table}[hbt]
 	\centering
 	\begin{tabular}{
-			>{\centering\arraybackslash}m{1.5cm}|
-			>{\centering\arraybackslash}m{3cm}|
-			>{\centering\arraybackslash}m{1.5cm}|
-			>{\centering\arraybackslash}m{9cm}
+			>{\centering\arraybackslash}m{1cm}|
+			>{\centering\arraybackslash}m{2.5cm}|
+			>{\centering\arraybackslash}m{1.25cm}|
+			>{\centering\arraybackslash}m{5.5cm}
 		}
-		\hline
+		\toprule
 		& $\mu = 1$ & $\mu = 2$ & $\mu = 3$ \\
-		\hline
+		\midrule
 		$s = 1$ & 
-		\begin{minipage}[t]{2.6cm}
+		\begin{minipage}[t]{2.5cm}
 			\centering
-			\begin{subfigure}[t]{1.23cm}
+			\begin{subfigure}[t]{1.2cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (-.4,0.8) {L};
 					\node (bt2) at (.4,0.8) {H};
 					\node (bc1) at (0,0) {$\mu$};
@@ -2472,9 +2432,9 @@ found with those $s$ and $\mu$ sizes.
 				\label{cons.a}
 			\end{subfigure}
 			\hfill
-			\begin{subfigure}[t]{1.23cm}
+			\begin{subfigure}[t]{1.2cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (-.4,0.8) {H};
 					\node (bt2) at (.4,0.8) {L};
 					\node (bc1) at (0,0) {$\mu$};
@@ -2487,9 +2447,9 @@ found with those $s$ and $\mu$ sizes.
 			\end{subfigure}
 		\end{minipage}
 		&
-		\begin{minipage}[t]{1.7cm}
+		\begin{minipage}[t]{1.2cm}
 			\centering
-			\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 				\node (bt1) at (-.4,0.8) {L};
 				\node (bt2) at (.4,0.8) {H};
 				\node (bc1) at (-.4,0) {$\mu$};
@@ -2502,9 +2462,9 @@ found with those $s$ and $\mu$ sizes.
 			\label{cons.c}
 		\end{minipage}
 		&
-		\begin{minipage}[t]{1.7cm}
+		\begin{minipage}[t]{1.2cm}
 			\centering
-			\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 				\node (bc1) at (-.4,0) {$\mu$};
 				\node (bc2) at (.4,0) {$\mu$};
 				\node (bc3) at (0,0) {$\mu$};
@@ -2517,13 +2477,13 @@ found with those $s$ and $\mu$ sizes.
 			\label{cons.d}
 		\end{minipage}
 		\\
-		\hline
+		\midrule
 		$s = 2$ & - & - &
-		\begin{minipage}[t]{9cm}
+		\begin{minipage}[t]{5.5cm}
 			\centering
-			\begin{subfigure}[t]{1.5cm}
+			\begin{subfigure}[t]{1.2cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (-.4,0.8) {H};
 					\node (bt2) at (.4,0.8) {L};
 					\node (bc1) at (-.4,0) {$\mu$};
@@ -2539,9 +2499,9 @@ found with those $s$ and $\mu$ sizes.
 				\label{cons.e}
 			\end{subfigure}
 			\hfill
-			\begin{subfigure}[t]{1.5cm}
+			\begin{subfigure}[t]{1.2cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (-.4,0.8) {H};
 					\node (bt2) at (.4,0.8) {L};
 					\node (bc1) at (-.4,0) {$\mu$};
@@ -2557,9 +2517,9 @@ found with those $s$ and $\mu$ sizes.
 				\label{cons.f}
 			\end{subfigure}
 			\hfill
-			\begin{subfigure}[t]{1.5cm}
+			\begin{subfigure}[t]{1.2cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (0,0.8) {H};
 					\node (bt2) at (.4,0.8) {L};
 					\node (bt3) at (.8,0.8) {H};
@@ -2576,13 +2536,13 @@ found with those $s$ and $\mu$ sizes.
 				\label{cons.g}
 			\end{subfigure}
 		\end{minipage}
-		\\ \hline
+		\\ \midrule
 		$s = 3$ & - & - &
-		\begin{minipage}{9cm}
+		\begin{minipage}{5.5cm}
 			\centering
-			\begin{subfigure}[t]{1.5cm}
+			\begin{subfigure}[t]{1cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (-.4,0.8) {H};
 					\node (bt2) at (.4,0.8) {L};
 					\node (bc1) at (-.4,0) {$\mu$};
@@ -2599,9 +2559,9 @@ found with those $s$ and $\mu$ sizes.
 				\label{cons.h}
 			\end{subfigure}
 			\hfill
-			\begin{subfigure}[t]{1.5cm}
+			\begin{subfigure}[t]{1cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (-.4,0.8) {L};
 					\node (bt2) at (0,0.8) {H};
 					\node (bt3) at (.4,0.8) {L};
@@ -2621,9 +2581,9 @@ found with those $s$ and $\mu$ sizes.
 				\subcaption{}
 				\label{cons.i}
 			\end{subfigure}  \hfill
-			\begin{subfigure}[t]{1.5cm}
+			\begin{subfigure}[t]{1cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (-.4,0.8) {H};
 					\node (bt2) at (0,0.8) {L};
 					\node (bt3) at (.4,0.8) {H};
@@ -2642,9 +2602,9 @@ found with those $s$ and $\mu$ sizes.
 				\subcaption{}
 				\label{cons.j}
 			\end{subfigure}  \hfill
-			\begin{subfigure}[t]{1.5cm}
+			\begin{subfigure}[t]{1cm}
 				\centering
-				\begin{tikzpicture}
+				\begin{tikzpicture}[scale = 0.9]
 					\node (bt1) at (-.4,0.8) {L};
 					\node (bt2) at (0,0.8) {H};
 					\node (bt3) at (.4,0.8) {L};
@@ -2671,8 +2631,6 @@ found with those $s$ and $\mu$ sizes.
 	\caption{Hausa constraints returned by BUFIA-AR  when $s \leq 3, \   t \leq 3, \ \mu \leq 3$}
 	\label{tab.results}
 \end{table}
-
-
 As shown in Table~\ref{sec5.tab.compare}, all of these
 constraints together constitute three categories: one where the
 baseline constraints have matching BUFIA constraints, one where the
@@ -2685,12 +2643,11 @@ implicated by the structures in Figure~\ref{tab.results}. Boldface
 indicates the tone on heavy syllables. These labels serve only 
 as shorthand for the ARs shown in Table~\ref{sec5.tab.compare} and 
 may be ambiguous, as they do not fully capture the structures. 
-
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{p{5cm}p{5cm}p{5cm}}
+	\begin{tabular}{p{4cm}p{3.5cm}p{3.5cm}}
 		\toprule
-		\textbf{Constraints Present in \newline both BUFIA and Baseline} 
+		\textbf{Present in both \newline BUFIA and Baseline} 
 		& \textbf{Baseline Constraints \newline Absent from BUFIA} 
 		& \textbf{BUFIA Constraints \newline Absent from Baseline} \\
 		\midrule
@@ -2711,7 +2668,6 @@ may be ambiguous, as they do not fully capture the structures.
 	\caption{Comparing baseline constraints with BUFIA constraints}
 	\label{sec5.tab.compare}
 \end{table}
-
 The first category is when the BUFIA-AR attested constraints align
 with the linguistic generalisations previously argued for in the
 literature. For monosyllabic forms (when $s=1$), BUFIA-AR returned
@@ -2731,25 +2687,22 @@ disallows trimoraic syllables as expressed by the constraint
 \textsc{*3T-Contour}. BUFIA-AR does not return any specific tonal
 forms for this structure, since any tonal sequence it carries will
 ultimately violate the forbidden structure.
-
 One thing to note here is that both \textsc{Contour}{$_\mu$} and
 \textsc{3T-Contour} describe structural information:
 \textsc{Contour}{$_\mu$} prohibits binary branching on a mora node,
 while \textsc{3T-Contour} prohibits ternary branching on a syllable
 node. The reason that \textsc{3T-Contour} can be ruled out by a single
-constraint \kuo{cons.d}, whereas two constraints, \kuo{cons.a} and
-\kuo{cons.b}, are needed to account for \textsc{Contour}{$_\mu$} is
+constraint \ref{cons.d}, whereas two constraints, \ref{cons.a} and
+\ref{cons.b}, are needed to account for \textsc{Contour}{$_\mu$} is
 that in the current implementation, tonal specifications must be fully
 specified, and we did not include an umbrella feature, or permit
 under-specified tonal nodes, that would match both H and L.
-
 Overall, BUFIA constraints (\ref{cons.a}-\ref{cons.d}) correctly
 reflect frequently reported patterns regarding the tonal inventory,
 TBU, and syllable weight, and arguably cover some of the most
 fundamental aspects of Hausa tonology. This demonstrates that BUFIA-AR
 is not only capable of learning these tonotactic patterns but also
 expressing them in terms of ARs.
-
 The second category regards baseline constraints without matching
 BUFIA constraints. There are two of these constraints,
 \textsc{*NonFinal-Fall} and \textsc{*Lapse}. Each of these appear to
@@ -2771,9 +2724,7 @@ data points indicate that the constraint \textsc{*NonFinal-Fall} is
 too strong and it must be further refined if it is to account for the
 full range of observed data.
 
-
 \ea Hausa words exhibiting HL.H pattern (\textsc{*NonFinal-Fall})
-
 
 \label{hlhwords}
 \setlength{\tabcolsep}{0pt} % reduce horizontal padding
@@ -2788,287 +2739,6 @@ full range of observed data.
 \end{tabular}
 \z
 
-Consider the next baseline constraint \textsc{*Lapse}, which disfavours
-the L-tone spreading, therefore predicts the absence of H.L.L and L.L.H 
-\citep{zoll2003optimal}. The BUFIA constraint
-(\ref{cons.h}) *H.L.L bans one form of H.L.L when all three syllables
-are monomoraic, but does not entail banning other H.L.L structures, 
-such as ones that contain a heavy syllable. An
-example in the data is the word \textit{sá.bòo.dà} `because.' Even
-though this word expresses the H.L.L pattern, it does not contain the
-structure shown in (\ref{cons.h}) and therefore it satisfies BUFIA
-constraint (\ref{cons.h}) *H.L.L.\footnote{Visually, \raisebox{-.4em}{
-		\begin{tikzpicture}[scale=0.9,baseline=(current bounding box.center)]
-
-			\node (bt1) at (-0.4,0.8) {\scriptsize H};
-			\node (bt2) at (0.4,0.8) {\scriptsize L};
-			\node (bc1) at (-0.4,0) {\scriptsize $\mu_1$};
-			\node (bc2) at (0,0) {\scriptsize $\mu_2$};
-			\node (bc3) at (0.4,0) {\scriptsize $\mu_3$};
-			\node (bs1) at (-0.4,-0.8) {\scriptsize $\sigma_1$};
-			\node (bs2) at (0,-0.8) {\scriptsize $\sigma_2$};
-			\node (bs3) at (0.4,-0.8) {\scriptsize $\sigma_3$};
-			\draw (bt1) -- (bc1) -- (bs1);
-			\draw (bt2) -- (bc2) -- (bs2);
-			\draw (bt2) -- (bc3) -- (bs3);
-		\end{tikzpicture}
-	}
-	might appear to be contained in
-	\raisebox{-.4em}{
-		\begin{tikzpicture}[scale=0.9,baseline=(current bounding box.center)]
-			\node (bt1) at (-0.4,0.8) {\scriptsize H};
-			\node (bt2) at (0.4,0.8) {\scriptsize L};
-			\node (bc1) at (-0.4,0) {\scriptsize $\mu_1$};
-			\node (bc2) at (0,0) {\scriptsize $\mu_2$};
-			\node (bc3) at (0.4,0) {\scriptsize $\mu_3$};
-			\node (bc4) at (0.8,0) {\scriptsize $\mu_4$};
-			\node (bs1) at (-0.4,-0.8) {\scriptsize $\sigma_1$};
-			\node (bs2) at (0,-0.8) {\scriptsize $\sigma_2$};
-			\node (bs3) at (0.8,-0.8) {\scriptsize $\sigma_3$};
-			\draw (bt1) -- (bc1) -- (bs1);
-			\draw (bt2) -- (bc2) -- (bs2);
-			\draw (bt2) -- (bc3) -- (bs2);
-			\draw (bt2) -- (bc4) -- (bs3);
-		\end{tikzpicture}
-	}
-	but in fact the two structures are incomparable in the partially-ordered
-	space because \(\mu_3\) is associated to \(\sigma_3\) in the former
-	but not in the latter.}
-
-Furthermore, BUFIA-AR did not return a constraint prohibiting the
-factor L.L.H. In fact, there are also instances of this pattern as
-shown in Example~(\ref{llhwords}). 
-
-\ea Hausa words exhibiting the L.L.H pattern
-\label{llhwords}
-
-\setlength{\tabcolsep}{0pt} % reduce horizontal padding
-\renewcommand{\arraystretch}{1} % reduce vertical spacing
-\begin{tabular}{@{}l@{\hspace{0.8em}}l@{\hspace{1em}}l@{}}
-	a.  & mà.là.fáa      & ``the hat or cap’’ \\
-	b.  & tùn.kù.yáu     & ``the flea’’ \\
-	c.  & gì.zàa.góo     & ``the adze’’ \\
-	d.  & tàu.ràa.róo    & ``the star’’ \\
-	e.  & gàa.jì.màa.rée & ``the cloud’’ \\
-\end{tabular}
-\z
-
-To summarise, the reason BUFIA did not find the baseline constraints
-\textsc{*NonFinal-Fall} and \textsc{*Lapse} is simply because they are
-not true of the data, which has multiple forms violating those
-constraints.
-
-This brings us to the third category, which includes BUFIA constraints
-without matching baseline constraints. Generally, these constraints
-partially match \textsc{*NonFinal-Fall} and \textsc{*Lapse}. However,
-since both baseline constraints are not generally true of the data,
-the BUFIA constraints are typically more specific refinements of them,
-forbidding narrower classes of forms. We can classify these constraints
-to two types: constraints concerning contour (\ref{cons.e}, \ref{cons.f})
-and constraints concerning spreading (\ref{cons.g}, \ref{cons.i},
-\ref{cons.j}, \ref{cons.k}).
-
-Constraint (\ref{cons.e}) and (\ref{cons.f}) specify two environments that forbid 
-a HL contour: when a HL syllable is followed by a light L-toned syllable 
-(\ref{cons.e}, *F.L), or when it is preceded by a light H-toned syllable 
-(\ref{cons.f}, *H.F). The forms of F.L and H.F, termed as ``non-contrasting'' 
-tone by \citet{zoll2003optimal}, have been reported in other languages. 
-For instance, in Mende, disyllabic R.H undergoes tone absorption and
-simplifies to L.H, and F.L simplifies into H.L \citep{leben2017tone}. 
-In Hausa, since the light syllables with rising tones are banned, BUFIA-AR 
-only returns *F.L and *H.F constraints. \citet[p.598]{Newmanbook} 
-points out that F.L optionally changes to H.L in complex relative pronouns 
-and adverbs; however, such simplification does not apply to our dataset, 
-with which BUFIA-AR remains consistent.
-
-In terms of the constraints concerning spreading, traditional OT includes 
-\textsc{*Clash} and \textsc{*Lapse}, which ban adjacent syllables linked 
-to either H or L. Among BUFIA constraints, \textsc{*Clash } and \textsc{*Lapse} 
-are reflected in more specific forms as in constraint (\ref{cons.g}-\ref{cons.k}).
-
-Constraints (\ref{cons.e}, *F.L), (\ref{cons.h}, *H.L.L), and (\ref{cons.i}, 
-*L.L.L-HL) address the cases which forbid L spreading in particular 
-circumstances. Constraint \kuo{cons.e} and \kuo{cons.h} prevent it after H 
-tones, and \kuo{cons.i} prevents a trisyllabic L span before a HL melody.
-
-Similarly, the constraint (\ref{cons.f}, *H.F), (\ref {cons.g}, *\textbf{H}.H-LH), 
-(\ref{cons.j}, *H.H-LH), and (\ref{cons.k}, *L.H.H-L) restrict H-spreading 
-in different environments. For example, \kuo{cons.g} and \kuo{cons.j} prohibit 
-an H tone (preceding an LH) from spreading across two syllables, while 
-\kuo{cons.k} forbids an H tone from spreading to two syllables when it is 
-wedged between two L-toned syllables.
-
-Finally, four BUFIA constraints (\ref{cons.g},*\textbf{H}.H-LH), 
-(\ref{cons.i},*L.L.L-HL), (\ref{cons.j},*H.H-LH), and (\ref{cons.k},*L.H.H-L)
-potentially demonstrate the expressive advantage of ARs over string
-representations. These constraints involve unassociated units, either
-unassociated tones or syllables. For example, Constraint
-\kuo{cons.g} describes the following condition: when a H spreads over a heavy
-syllable to another syllable, the tonal tier can only be extended by
-adding one more tone. The association of the unassociated tones does not
-have to be specified. A similar pattern is seen in \kuo{cons.i} where
-if L tone spreads over three light syllables, the tonal tier will only
-accommodate one more tone. These patterns reflect a central fact
-regarding autosegmental phonology: units from different tiers do not
-need to be synchronised. This idea is more difficult to express with
-purely linear string representations.
-
-In summary, this subsection reports the qualitative evaluation of 
-BUFIA-AR by comparing BUFIA constraints with the constraints reported
-by linguists. It was found that BUFIA-AR is able to learn tonotactic
-patterns over AR, and that there are interesting differences between
-the constraints produced by BUFIA-AR and those posited by earlier
-researchers.
-
-
-\subsubsection{Quantitative Evaluation: Cross-validation}
-
-The $k$-fold cross-validation procedure partitions the dataset into 
-$k$ folds. In each iteration, BUFIA-AR is trained on $k-1$ folds 
-and evaluated on the remaining held-out fold. This process is 
-repeated $k$ times so that each fold serves as the evaluation 
-set exactly once.
-
-Since BUFIA is a deterministic categorical learner, the distinction 
-between token- and type-based datasets does not ultimately affect the 
-learned grammar. However, we report both settings for completeness. 
-In the type-based setting, the dataset consists of 
-64 distinct Hausa AR types, randomly divided into four folds (16 types
-per fold), with 48 used for training and 16 for testing. In the token-based setting, the full dataset of 621 
-tokens is also randomly divided into four folds (155/156 per fold). Within 
-the train set (465/466 in total), there were 55–62 unique types.
-
-In each round, BUFIA-AR is trained on three folds and evaluated on the 
-remaining fold. The baseline grammar is evaluated on the same held-out 
-fold. Accuracy is defined as the proportion of correctly accepted forms in the held-out set (also known as \textit{recall}).
-
-In addition, we apply the same procedure using a string-based 
-version of BUFIA (BUFIA-Str). Both BUFIA-AR and BUFIA-Str require a user-defined complexity 
-bound, which determines the maximum size of constraints considered 
-by the algorithm. However, this notion of complexity is not directly 
-comparable across representations. For BUFIA-AR, it is controlled 
-by multiple parameters ($t, m, s$) that limit different tiers; 
-we set these to $t = m = s = 3$ to match the constraints found in 
-\ref{tab.results}. BUFIA-Str uses a single complexity 
-parameter $k$. Since the maximum constraint length in 
-Table~\ref{sec5.tab.compare} is $7$ (i.e. \ref{cons.j}), we set $k = 7$
-to match this bound. This setting allows us to assess whether 
-constraints identified over AR can also be recovered using a 
-string-based representation under a comparable complexity limit.
-
-\begin{table}
-	\centering
-	\small
-	\begin{tabular}{c cc ccc cc ccc}
-		\toprule
-		& \multicolumn{4}{c}{\textbf{Type-Based}} & \multicolumn{4}{c}{\textbf{Token-Based}} \\
-		\cmidrule(lr){2-5} \cmidrule(lr){6-9}
-		\textbf{Fold} 
-		& \textbf{Train/Test}
-		& \textbf{AR} & \textbf{Str} & \textbf{Baseline}
-		& \textbf{Train/Test}
-		& \textbf{AR} & \textbf{Str} & \textbf{Baseline} \\
-		\midrule
-		
-		1 & 48/16 
-		& 0.938 & 0.500 & 0.812
-		& 465(55)/156 
-		& 0.987 & 0.949 & 0.936 \\
-		
-		2 & 48/16 
-		& 0.875 & 0.500 & 0.812
-		& 466(60)/155
-		& 0.994 & 0.974 & 0.942 \\
-		
-		3 & 48/16 
-		& 0.875 & 0.812 & 0.938
-		& 466(62)/155
-		& 1.000 & 1.000 & 0.955 \\
-		
-		4 & 48/16 
-		& 0.938 & 0.812 & 0.688
-		& 466(55)/155
-		& 0.994 & 0.942 & 0.974 \\
-		
-		\midrule
-		\textbf{Avg} 
-		& 
-		& \textbf{0.907} & \textbf{0.656} & \textbf{0.812}
-		& 
-		& \textbf{0.994} & \textbf{0.966} & \textbf{0.952} \\
-		
-		\bottomrule
-	\end{tabular}
-	\caption{Four-fold cross-validation in both type- and token-based settings. In the token setting, the number of distinct types in Train are indicated in parentheses.}
-	\label{sec4.tab.crosvalid}
-\end{table}
-
-
-%Although cross-validation can in principle involve both
-%positive and negative data, we do not generate negative ARs for
-%evaluation. We only evaluate on held-out positive forms. This is
-%because it is not straightforward to determine what counts as a
-%meaningful “ill-formed” form in Hausa. Structurally ill-formed ARs
-%(e.g., those containing crossing lines or mismatched tiers) are never
-%generated by BUFIA-AR’s \textsc{NextSupFact} function. The
-%construction of forms which are illicit according to the baseline 
-%grammar would not make for a fair comparison
-%against this baseline. Additionally, the only forms where BUFIA 
-%constraints and baseline constraint disagree, as the qualitative
-%analysis makes clear, involve forms which violate
-%\textsc{*NonFinal-Fall} and \textsc{*Lapse}, some of which were
-%actually present in the Hausa vocabulary. Finally, constructing
-%grammatical and ungrammatical tonal forms would likely require a
-%carefully designed native-speaker judgment study, which we leave 
-%for future work. For these reasons, we only report accuracy over 
-%positive held-out forms.
-
-As shown in Table~\ref{sec4.tab.crosvalid}, BUFIA-AR outperforms
-BUFIA-Str and the baseline grammar, and reaches an average accuracy of 0.907 
-in the type-based setting and 0.994 in the token-based setting. 
-The overall performance increase in the token-based setting is expected because of the uneven distribution of tokens over types: most types are rare \citep{Yang2013}. Consequently, frequently attested structures are likely to be attested in training and form a larger proportion of the testing data.
-
-BUFIA-Str performs below the baseline in the type-based 
-setting (0.656 < 0.812), but outperforms in the token-based setting 
-(0.966 > 0.952). The lower performance in the 
-type-based setting is likely due to the relatively high complexity 
-threshold ($k=7$), which leads to overfitting in the type-based setting.
-In the token-based setting, this effect is compensated.
-These results suggest that the BUFIA-AR supports 
-stronger generalisation over distinct types, including rare ones,
-even without frequency information.
-
-In addition, across all four folds, BUFIA-AR consistently 
-returns the constraints (\ref{cons.a}–\ref{cons.f}) and (\ref{cons.h}), 
-while the remaining constraints vary slightly across folds.
-Altogether, this indicates that BUFIA-AR not only captures the core
-generalisations of Hausa tonotactics but also extends to rarer and
-more exceptional patterns that the baseline fails to account
-for. Overall, the quantitative evaluation demonstrates that BUFIA-AR
-generalises robustly to unseen data and empirically outperforms
-a similar algorithm using string representations
-and a theoretically motivated baseline grammar.
-
-
-\section{Discussion}
-\label{sec:discussion}
-
-\subsection{Optimisation versus Satisfaction}
-\label{sec:discussion.ot}
-The grammars output by BUFIA-AR compute the well-formedness of a word
-by checking whether its structure \textit{contains} any forbidden
-structures (the negative literals), or equivalently, whether it
-\textit{satisfies} all of the constraints. This is in contrast to
-globally \textit{optimising} over \textit{violable} constraints.  The
-pattern obtained by satisfying the 11 BUFIA constraints captures the
-asymmetric distribution of spreading and contour formation while
-accommodating the rarer data points. On the other hand, In
-\citet{zoll2003optimal}’s Optimal Tone Mapping program, tonal mapping
-arises from the optimisation over morphological directionality
-constraints (\textsc{Align-R} and \textsc{Align-L}) and
-quality-sensitive markedness constraints (\textsc{*Clash} and
-\textsc{*Lapse}).
-
 What are we to make of these differences? Consider how each approach explains the
 common absence of non-contrasting forms such as
 \textsc{*F.L} and \textsc{*H.F}.   Optimal Tone Mapping utilises
@@ -3078,6 +2748,7 @@ which explained their absence by the lack of a motivation for spreading.
 \citet{zoll2003optimal} writes, ``with one-to-one linking built into the Association 
 Convention, nothing automatically forces one tone to
 spread onto a syllable that already bears tone.''
+
 On the other hand, BUFIA-AR returns no \textsc{*Lapse} or \textsc{*Clash} 
 constraints, but instead returns more specific versions of them. 
 There appears to be a trade-off between optimisation-based grammars using simpler 
@@ -3138,8 +2809,7 @@ the fact remains that BUFIA-AR returns a set of inviolable constraints
 consistent with the data comparable to the ones utilised in earlier
 analyses.
 
-\subsection{Gradience versus Categoricity in Grammars}
-\label{sec:discussion.grammar}
+%\subsection{Gradience versus Categoricity in Grammars} \label{sec:discussion.grammar}
 
 Another ongoing debate in phonotactic learning concerns whether the
 grammar should be categorical or gradient. Learning models like
@@ -3227,8 +2897,7 @@ In sum, the categorical nature of BUFIA-AR does not prohibit it from
 being an important contribution to our understanding of how tonotactic
 patterns can be learned.
 
-\section{Conclusion}
-\label{sec:conclusion}
+\section{Conclusion} \label{sec:conclusion}
 This paper presents the first tonotactic learning algorithm over
 autosegmental representations to our knowledge. Through a case study
 of Hausa, we constructed a database containing 64 distinct ARs from
@@ -3254,13 +2923,13 @@ conversion to the implementation of BUFIA-AR, can serve as a general
 tool for exploring tonotactic constraints in other languages, and as 
 a foundation for future work on more complex tonal process learning.
 
-% BUFIA-AR and the grammars it outputs differ in important respects from
-% other approaches. For one, BUFIA-AR is a categorical learner without
-% probabilistic induction. As discussed in Section~\ref{sec:discussion.grammar}, however, we do
-% not view this as a deficiency but as a deliberate design choice. Also,
-% the grammars BUFIA-AR produces are sets of constraints, all of which
-% must be satisfied, which stand in contrast to optimisation-based
-% grammars.
+ BUFIA-AR and the grammars it outputs differ in important respects from
+ other approaches. For one, BUFIA-AR is a categorical learner without
+ probabilistic induction. As discussed in Section~\ref{sec:discussion.grammar}, however, we do
+ not view this as a deficiency but as a deliberate design choice. Also,
+ the grammars BUFIA-AR produces are sets of constraints, all of which
+ must be satisfied, which stand in contrast to optimisation-based
+ grammars.
 
 There are several directions for future research. It would be valuable
 to investigate the psychological reality of the constraints inferred
@@ -3270,6 +2939,7 @@ BUFIA-AR. %It is also important to consider variants of BUFIA-AR which
 % address languages with floating tones, OCP violations, and/or richer
 % tonal inventories. Finally, BUFIA-AR should also be compared with
 % alternative approaches to tonotactic learning.
+
 Another future direction is to learn tonal
 processes. \citet{Yolyan2025} presents a method within the framework
 of Boolean Monadic Recursive Schemes \citep{chandleejardine21bmrs} for
@@ -3283,7 +2953,7 @@ Finally, although this paper primarily targets tonotactic patterns
 in African languages, the proposed autosegmental learning framework 
 naturally extends to Asian tonal languages such as Shanghai and Fuzhou 
 Chinese, where tonal distributions are tightly conditioned by syllable 
-structure and segmental features \citep{yip2002tone}. %For example, in Shanghai Chinese, the lower register tone only associates with syllables that have voiced obstruent onsets, but not voiceless ones \citep[also known as ``depressor consonants" in some African languages \citep{cassimjee1992tonology}]{chen2015shanghai}. 
+structure and segmental features \citep{yip2002tone}. 
 It would be interesting to explore how to model such 
 an enriched tonal geometry, and how tonal grammars could be 
 learned over ARs in these languages.
@@ -3336,5 +3006,5 @@ State whether any supplementary material intended for publication has been provi
 \bibliography{ref.bib}
 \bibliographystyle{apalike}
 
-\end{Backmatter}
+\end{Backmatter} 
 \end{document}
