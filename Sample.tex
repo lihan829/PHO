@@ -55,6 +55,7 @@
 \usepackage{fontspec}
 \usepackage{textgreek}   
 \newcommand{\hijeff}[1]{\textcolor{red}{\textbf{[#1]}}}
+\newcommand{\hihan}[1]{\textcolor{blue}{\textbf{[#1]}}}
 
 
 \begin{document}
@@ -441,6 +442,7 @@ reflects only the final outcomes of tonal mapping, rather than
 intermediate representations produced by tonal rules, which
 potentially misses important phonological generalisations.
 \hijeff{Do we want to mention ICGI paper here - maybe we should, why not}
+\hihan{Well it hasn't been accepted so it's just a manuscript at this point.}
 
 Hausa provides a clear illustration of this point. The absence 
 of rising tones on a single syllable can be explained as follows. 
@@ -451,6 +453,7 @@ position or L elsewhere \citep{Leben,Newmanbook}. Likewise, the absence of final
 L.L sequences on long vowels is attributed to \textsc{Low Tone Raising}, which 
 changes underlying L.L to L.H when the second L occurs on a long vowel \citep{Leben,leben1996tonal}.
 \hijeff{I removed the SPE styled rules and explained in prose instead.}
+\hihan{Sounds good}
 
 %\begin{multicols}{2}
 %	\ea Rising Simplification \citep[p599]{Newmanbook}:\\
@@ -491,7 +494,7 @@ that encodes the geometry of tonal representations, modelling more
 complex tonal alternations, such as those discussed above, is more
 difficult. Establishing this representational foundation is therefore
 a useful precondition for future work on deeper tonal processes.
-\hijeff{On a second reading, I think this paragraph is still technically correct, but it now feels somewhat outdated. It reads like that we dont know whether transformations can be modeled over ARs, but we now know its possible, and exactly how do to}
+\hijeff{On a second reading, I think this paragraph is still technically correct, but it now feels somewhat outdated. It reads like that we dont know whether transformations can be modeled over ARs, but we now know its possible, and exactly how do to}\hihan{I think it is fine to leave it as is.}
 
 Lastly, we are not aware of existing learning models that operate
 with ARs directly for either tonal processes or tonotactics. In the next
@@ -588,6 +591,10 @@ only familiar with phonological theory.
 
 \hijeff{I added the paragraph of math disclaimer back but
  this is what R3 asked us to remove...}
+\hijeff{How about this: Section~\ref{sec:prelim} and ~\ref{sec:bufiaar}
+  are technical, and researchers only interested in BUFIA-AR's
+  performance may skip them.
+  Nonetheless, these sections are important because they provide \ldots}
 
 We note that Section~\ref{sec:prelim} and ~\ref{sec:bufiaar} are
 somewhat technical, and that researchers only interested in BUFIA-AR's
@@ -1132,7 +1139,7 @@ Using the same example from Figure~\ref{fig.hasse.str}, suppose
 the language forbids adjacent \(b\)s, formalised as a constraint
 \(^*bb\), which excludes strings \(\{bb, bba, bbb, abb,
 \cdots\}\). For concreteness, assume a data set \(D\) equal to
-\(\{aba, baabaa\}\).  BUFIA begins from the most general hypothesis:
+\(\{aba, baabaa\}\).  BUFIA begins from the most general hothesis:
 applies \textsc{Contain} to check whether the empty string $\epsilon$
 is attested in the positive data.  Since $\epsilon$ is contained in
 every string trivially, \textsc{Contain} returns true, and BUFIA does
@@ -2280,7 +2287,8 @@ which are based on canonical, non-derived tonal patterns,
 we restrict our dataset to monomorphemic words that are clearly 
 non-borrowed, and all others were filtered out. In addition, forms 
 %containing glides (ƙw, ƙy, kw, ky, gw, gy) 
-\hijeff{special letters won't show}
+\hijeff{special letters won't show}\hihan{that's weird. How about ``labialized and palatalized velar forms''}
+% see https://brucehayes.org/251HayesSchuhMetrics/handouts/02_Hausa_phonology.pdf
 were excluded to avoid 
 ambiguous syllabification and uncertain syllable weight.
 As a result, a total of 621 words transcribed in orthography
@@ -2981,23 +2989,23 @@ this paper.
 We would like to thank John Goldsmith for his careful reading of earlier drafts and 
 for his many insightful comments and suggestions. We also benefited from 
 discussions with the audiences of the Stony Brook PhoRum, Rutgers Subregular 
-Workshop, including Ellen Broselow, Thomas Graf, Jiwon 
-Yun, and Adam Jardine. Finally, the detailed and constructive feedback from three 
-anonymous reviewers, the Editor, the Associate Editor greatly improved strengthened 
-both analysis and the presentation in this paper.
+Workshop, \hihan{Yale's Phonology group?}, in addition to Ellen Broselow, Thomas Graf, Jiwon 
+Yun, and Adam Jardine. Finally, we are grateful for the detailed and constructive feedback from three anonymous reviewers, the Editor, and the Associate Editor, which greatly improved and strengthened both this paper's analysis and presentation.
 
 \paragraph{Funding statement}
-This research was supported by grants from the <funder-name><doi>(<award ID>); <funder-name><doi>(<award ID>).
-\hijeff{do you have funding to report}
+This research was supported by NSF grant \#2416183 to JH.
+\hijeff{do you have funding to report}\hihan{Done}
 \paragraph{Data availability statement}
 Replication data and code can be found in GitHub repository: \url{https://github.com/lihan829/BUFIA_AR.git}.
-
+\hihan{Do you want to take a snapshot of your corpus and code and put it on Dryad? That is another way to archive material and I think it may be more sustainable in the long run than github. MLRegTest is on Dryad: \url{https://doi.org/10.5061/dryad.dncjsxm4h}}
 \paragraph{Ethical standards}
 The research meets all ethical guidelines, including adherence to the legal requirements of the study country.
 
 \paragraph{Author contributions}
-HL curated data, conducted the case study, and wrote the first draft of the 
-manuscript. HL and JH revised the manuscript and approved the final version.
+\hihan{HL and JH conceived of the project. HL developed BUFIA-AR, }
+curated the data, conducted the case study, and
+wrote the first draft of the manuscript.
+HL and JH revised the manuscript and approved the final version.
 
 \paragraph{Supplementary material}
 State whether any supplementary material intended for publication has been provided with the submission.
