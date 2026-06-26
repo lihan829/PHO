@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  26 JUN 2026 01:59
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  26 JUN 2026 02:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2063,18 +2063,10 @@ Overfull \hbox (4.98506pt too wide) in paragraph at lines 1753--1754
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
-
-Package caption Warning: \label without proper reference on input line 1793.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig.AR.space' on page 18 undefined on input line 1784
-.
-
 File: fig.space.pdf Graphic file (type pdf)
 <use fig.space.pdf>
 
-Overfull \hbox (4.69254pt too wide) in paragraph at lines 1792--1794
+Overfull \hbox (4.69254pt too wide) in paragraph at lines 1792--1793
  [][] 
  []
 
@@ -2089,12 +2081,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/sc' will be
 (Font)              scaled to size 10.0pt on input line 2183.
 
-[22]
-
-LaTeX Warning: Reference `sec4.tab.conversion' on page 23 undefined on input li
-ne 2279.
-
-[23]
+[22] [23]
 
 Package subcaption Warning: `subfigure' is treated as `subtable'
 (subcaption)                 on input line 2421.
@@ -2193,17 +2180,14 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Sample.out' has not changed.
 (rerunfilecheck)             Checksum: 479DD7FE764FA01B75BBCA78531140F6;4371.
  ) 
 Here is how much of TeX's memory you used:
- 35785 strings out of 468168
- 701166 string characters out of 5432815
- 1153721 words of memory out of 5000000
- 63836 multiletter control sequences out of 15000+600000
+ 35784 strings out of 468168
+ 701145 string characters out of 5432815
+ 1153671 words of memory out of 5000000
+ 63835 multiletter control sequences out of 15000+600000
  716008 words of font info for 258 fonts, out of 8000000 for 9000
  1358 hyphenation exceptions out of 8191
  84i,22n,131p,543b,938s stack positions out of 10000i,1000n,20000p,200000b,200000s
