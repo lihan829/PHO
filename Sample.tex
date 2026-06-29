@@ -2,6 +2,8 @@
 
 
 %%%% Packages
+
+
 \usepackage{graphicx}
 \usepackage{multicol,multirow}
 \usepackage{amsmath,amssymb,amsfonts}
@@ -11,7 +13,10 @@
 \usepackage{appendix}
 \usepackage[authoryear]{natbib}
 \usepackage{ifpdf}
-\usepackage[T1]{fontenc}
+
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+
 \usepackage{newtxtext}
 \usepackage{newtxmath}
 \usepackage{textcomp}
@@ -52,8 +57,16 @@
 \usepackage{enumitem}
 \usepackage{makecell}
 \usepackage{gb4e}
-\usepackage{fontspec}
+%\usepackage{fontspec}
 \usepackage{textgreek}   
+
+\usepackage{fontspec}
+\setmainfont{CharisSIL-Regular.ttf}[
+    Path=Fonts/,
+    BoldFont=CharisSIL-Bold.ttf,
+    ItalicFont=CharisSIL-Italic.ttf
+]
+
 \newcommand{\hijeff}[1]{\textcolor{red}{\textbf{[#1]}}}
 \newcommand{\hihan}[1]{\textcolor{blue}{\textbf{[#1]}}}
 
@@ -99,6 +112,12 @@
 	representation for phonotactic learning.}
 
 \end{Frontmatter}
+
+jîn.ɗƙái
+
+jîn.\textipa{\texthtk}ái
+
+\end{document}
 
 \tableofcontents
 
@@ -1818,7 +1837,7 @@ unassociated L.
 
 \begin{figure}
 	\centering
-\includegraphics[scale=0.8]{fig.space.pdf}
+%\includegraphics[scale=0.8]{fig.space.pdf}
 \label{fig.AR.space}
 \caption{A partially-ordered hypothesis space over ARs}
 \end{figure}
@@ -2138,7 +2157,7 @@ submatrix in (\subref{fig:matrix-super}) (the shaded cells) matches matrices of
 as well as tonal strings, but does not match those of (\subref{fig:matrix-light}).
 
 
-\input{fig.matrixmatching.tex}
+%\input{fig.matrixmatching.tex}
 
 
 \subsection{Summary}
