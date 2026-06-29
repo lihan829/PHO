@@ -105,12 +105,7 @@
 	representation for phonotactic learning.}
 
 \end{Frontmatter}
-
-% jîn.ɗƙái
-
-% jîn.\textipa{\texthtk}ái
-
-% \end{document}
+
 
 \tableofcontents
 
@@ -156,7 +151,7 @@ implementation utilises a matrix-based representation for ARs, which
 is an adaptation of matrix-based representations of graphs
 \citep{west2001introduction,CLRS2022}.
 
-BUFIA-AR was tested on a curated corpus of Hausa \citep{wold-4}, a
+BUFIA-AR was tested on a curated corpus of Hausa \citep{wold-4,li2025learning}, a
 Chadic language in West Africa. The corpus consists of 621
 mono-morphemic words, which altogether provides a collection of 64
 distinct ARs.  Using this corpus as input, we assess the performance
@@ -322,7 +317,7 @@ HL surfaces as H.L.L in Mende (\textit{fé.là.là} `junction') but as H.H.L in 
 			\node (c) at (0,0) {j ee m aa g ee};
 			\node (g) at (0,-0.5) {`bat'};
 			\node (t1) at (.1,1) {H};
-			\node (t2) at (1,1) {L};
+			\node (t2) at (0.9,1) {L};
 			\draw (t1.south)-- ($(t1.south)+(0,-.45)$);
 			\draw (t1.south)-- ($(t1.south)+(-0.9,-.45)$);
 			\draw (t2.south) -- ($(t2.south)+(0,-.45)$);
@@ -432,8 +427,8 @@ banned AR as in Figure~\ref{graph:lh1}.
 
 Following \citet{jardine2017LocalNature}, if
 Figure~\ref{graph:lh1} is forbidden in the language, any AR
-\textit{containing}~\ref{graph:lh1}, such as
-\ref{graph:lh2} and \ref{graph:lh3}, will also be
+\textit{containing} it, such as
+Figure~\ref{graph:lh2}-\ref{graph:lh3}, will also be
 forbidden. Formally, if Grammar $G$ is the set of constraints in the
 language, such that \(G = \{AR_1, AR_2, \ldots, AR_n\}\), a well-formed
 We represent factors as \emph{conjunctive negative literals}:
@@ -849,26 +844,21 @@ the tone-mora matrix as the mora rows and tone columns respectively;
 and to the rows and columns in the mora-syllable matrix as the
 syllable rows and mora column respectively.
 \begin{table}[ht]
-	\centering
+\centering 
 	\begin{tabular}{cc}
-		\(
-		\begin{array}{c|cc}
+	\centering
+	\begin{tabular}{c|cc}
 			& L & H \\
 			\hline
-			\mu_1 & 1 & 0 \\
-			\mu_2 & 0 & 1 \\
-			\mu_3 & 0 & 1 \\
-		\end{array}
-		\)
-		&
-		% --- Column 2: Mora-Syllable Matrix ---
-		\(
-		\begin{array}{c|ccc}
-			& \mu_1 & \mu_2 & \mu_3 \\ \hline
-			\sigma_1 & 1     & 1     & 0     \\
-			\sigma_2 & 0     & 0     & 1
-		\end{array}
-		\)
+			$\mu_1$ & 1 & 0 \\
+			$\mu_2$ & 0 & 1 \\
+			$\mu_3$ & 0 & 1 \\
+	\end{tabular} \vspace{1em}		&
+	\begin{tabular}{c|ccc}
+			& $\mu_1$ & $\mu_2$ & $\mu_3$ \\ \hline
+			$\sigma_1$ & 1     & 1     & 0     \\
+			$\sigma_2$ & 0     & 0     & 1
+	\end{tabular}
 	\end{tabular}
 	\caption{Adjacency matrices: tone–mora matrix (left) and mora–syllable matrix (right)}
 	
@@ -894,7 +884,7 @@ Figure~\ref{tab.matrices}.
 			4 & 0 & & (2,4) \\
 			\bigtriangleup & && \\
 			5 & 0 & & (2,5) \\
-		\end{array}$ &
+		\end{array}$ \hspace{1em} &
 		$\begin{array}{c|c@{}c@{}c@{}c@{}c}
 			& 3 & \lhd & 4 & \lhd & 5 \\
 			\hline
@@ -960,7 +950,7 @@ in \ref{fig.restriction:b} because the dotted region in
 \ref{fig.restriction:b} preserves all internal relations of
 %:
 \ref{fig.restriction:a}, despite the differences in the
-indicing. In particular, $\mu_1, \mu_2, \sigma_1$ in
+indexing. In particular, $\mu_1, \mu_2, \sigma_1$ in
 \ref{fig.restriction:a} project to $\mu_2, \mu_3, \sigma_2$ in
 \ref{fig.restriction:b}, respectively.
 
@@ -1121,7 +1111,7 @@ Using the same example from Figure~\ref{fig.hasse.str}, suppose
 the language forbids adjacent \(b\)s, formalised as a constraint
 \(^*bb\), which excludes strings \(\{bb, bba, bbb, abb,
 \cdots\}\). For concreteness, assume a data set \(D\) equal to
-\(\{aba, baabaa\}\).  BUFIA begins from the most general hothesis:
+\(\{aba, baabaa\}\).  BUFIA begins from the most general hypothesis:
 applies \textsc{Contain} to check whether the empty string $\epsilon$
 is attested in the positive data.  Since $\epsilon$ is contained in
 every string trivially, \textsc{Contain} returns true, and BUFIA does
@@ -1376,11 +1366,12 @@ which by default associates to a single mora $\mu_2$ (\ref{ar:sup2});
 or by adding a mora to the rightmost syllable (\ref{ar:sup3}).
 
 \begin{figure}[ht]
+\setlength{\tabcolsep}{4pt}
 	\centering
 	% --- First Subfigure ---
 	\begin{minipage}[t]{0.2\textwidth}
 		\centering
-		\begin{tikzpicture} 
+		\begin{tikzpicture}[scale = 0.9] 
 			\node (s1) at (0,0) {$\sigma_1$};
 			\node (m1) at (0,1) {$\mu_1$};
 			\node (t1) at (0,2) {H};
@@ -1389,24 +1380,17 @@ or by adding a mora to the rightmost syllable (\ref{ar:sup3}).
 		
 		\vspace{1em}
 		
-		\begin{tabular}{c}
-			\(
-			\begin{array}{c|c}
-				& H \\
+		\begin{tabular}{c|c}
+				& \text{H} \\
 				\hline
-				\mu_1 & 1 \\
-			\end{array}
-			\)			\vspace{2em}
-			
-			\\
-			
-			\(
-			\begin{array}{c|c}
-				& \mu_1 \\
+				$\mu_1$ & 1 \\
+		\end{tabular}\vspace{2em}
+
+
+		\begin{tabular}{c|c}
+				& $\mu_1$ \\
 				\hline
-				\sigma_1 & 1 \\
-			\end{array}
-			\)
+				$\sigma_1$ & 1 \\
 		\end{tabular}
 		\vspace{1.5em}
 		\subcaption{Base AR}\label{ar:base}
@@ -1415,35 +1399,28 @@ or by adding a mora to the rightmost syllable (\ref{ar:sup3}).
 	% --- Second Subfigure ---
 	\begin{minipage}[t]{0.2\textwidth}
 		\centering
-		\begin{tikzpicture} 
+		\begin{tikzpicture}[scale = 0.9]
 			\node (s1) at (0,0) {$\sigma_1$};
 			\node (m1) at (0,1) {$\mu_1$};
 			\node (t1) at (0,2) {H};
-			\node (t2) at (1,2) {L};
+			\node (t2) at (1.2,2) {L};
 			\draw [-] (t1) to (m1) to (s1);
-			\draw [->, dotted,thick] (t1) to (t2);
+			\draw [->, >=Latex, dotted,thick] (t1) to (t2);
 		\end{tikzpicture}
 		
 		\vspace{1em}
 		
-		\begin{tabular}{c}
-			\(
-			\begin{array}{c|cc}
-				& H & \bm{L} \\
+		\begin{tabular}{c|cc}
+				& H & L \\
 				\hline
-				\mu_1 & 1 & \bm{0} \\
-			\end{array}
-			\)			\vspace{2em}
-			
-			\\
-			
-			\(
-			\begin{array}{c|c}
-				& \mu_1 \\
+				$\mu_1$ & 1 & \textbf{0}\\
+		\end{tabular}\vspace{2em}
+
+
+		\begin{tabular}{c|c}
+				& $\mu_1$ \\
 				\hline
-				\sigma_1 & 1 \\
-			\end{array}
-			\)
+				$\sigma_1$ & 1 \\
 		\end{tabular}
 		\vspace{1.5em}
 		\subcaption{Add a tone}\label{ar:sup1}
@@ -1451,76 +1428,55 @@ or by adding a mora to the rightmost syllable (\ref{ar:sup3}).
 	% --- Third Subfigure ---
 	\begin{minipage}[t]{0.2\textwidth}
 		\centering
-		\begin{tikzpicture} 
+		\begin{tikzpicture}[scale = 0.9]
 			\node (s1) at (0,0) {$\sigma_1$};
-			\node (s2) at (1,0) {$\sigma_2$};
+			\node (s2) at (1.2,0) {$\sigma_2$};
 			\node (m1) at (0,1) {$\mu_1$};
 			\node (t1) at (0,2) {H};
-			\node (m2) at (1,1) {$\mu_2$};
+			\node (m2) at (1.2,1) {$\mu_2$};
 			\draw [-] (t1) to (m1) to (s1);
-			\draw [->,dotted,thick] (s1) to (s2);
+			\draw [->,>=Latex, dotted,thick] (s1) to (s2);
 			\draw [-] (m2) to (s2);
-			\draw [->,dotted,thick] (m1) to (m2);
+			\draw [->,>=Latex, dotted,thick] (m1) to (m2);
 		\end{tikzpicture}
-		\vspace{1em}
+	
+		\vspace{1.1em}
 		
-		\begin{tabular}{c}
-			\(
-			\begin{array}{c|c}
-				& H \\
-				\hline
-				\mu_1 & 1 \\
-\mu_2 & \bm{0} \\
-			\end{array}
-			\)			\vspace{1em}
-			
-			\\
-			
-			\(
-			\begin{array}{c|cc}
-				& \mu_1 & \mu_2 \\
-				\hline
-				\sigma_1 & 1 & 0  \\
-				\sigma_2 & 0 & \bm{1} \\
-			\end{array}
-			\)
-		\end{tabular}
-		
-		\subcaption{Add a syllable}\label{ar:sup2}
+		\begin{tabular}{c|c}
+			& \text{H} \\			\hline
+			$\mu_1$ & 1 \\
+			$\mu_2$ & \textbf{0} \\
+		\end{tabular}\vspace{1em}
+		\begin{tabular}{c|cc}
+			& $\mu_1$ & $\mu_2$ \\
+			\hline
+			$\sigma_1$ & 1 & 0\\
+			$\sigma_2$ & 0 & \textbf{1}\\
+		\end{tabular}		\subcaption{Add a syllable}\label{ar:sup2}
 	\end{minipage}	\hfill
 	\begin{minipage}[t]{0.2\textwidth}
 		\centering
-		\begin{tikzpicture} 
+		\begin{tikzpicture}[scale = 0.9]
 			\node (s1) at (0,0) {$\sigma_1$};
 			\node (m1) at (0,1) {$\mu_1$};
 			\node (t1) at (0,2) {H};
-			\node (m2) at (1,1) {$\mu_2$};
+			\node (m2) at (1.2,1) {$\mu_2$};
 			\draw [-] (t1) to (m1) to (s1);
 			\draw [-, dotted,thick] (m2) to (s1);
-			\draw [->,dotted, thick] (m1) to (m2);
+			\draw [->,>=Latex, dotted, thick] (m1) to (m2);
 		\end{tikzpicture}
 		
-		\vspace{1em}
+		\vspace{1.1em}
 		
-		\begin{tabular}{c}
-			\(
-			\begin{array}{c|c}
-				& H \\
-				\hline
-				\mu_1 & 1 \\
-\mu_2 & \bm{0} \\
-			\end{array}
-			\)			\vspace{1em}
-			
-			\\
-			
-			\(
-			\begin{array}{c|cc}
-				& \mu_1 & \mu_2 \\
-				\hline
-				\sigma_1 & 1 & \bm{1} \\
-			\end{array}
-			\)
+		\begin{tabular}{c|c}
+			& \text{H} \\			\hline
+			$\mu_1$ & 1 \\
+			$\mu_2$ & \textbf{0} \\
+		\end{tabular}\vspace{1em}
+		\begin{tabular}{c|cc}
+			& $\mu_1$ & $\mu_2$ \\
+			\hline
+			$\sigma_1$ & 1 & \textbf{1}\\
 		\end{tabular}
 		\vspace{1em}
 		\subcaption{Add a mora}\label{ar:sup3}
@@ -1633,12 +1589,11 @@ association: (i) linking the unassociated tone to the nearest mora
 nearest tone (Figure~\ref{new.assoc2}); or (iii) directly linking an
 unassociated tone and an unassociated mora (Figure~\ref{new.assoc3}).
 \begin{figure}[ht]
-%		\small	
-%		\centering
+\setlength{\tabcolsep}{4pt}
 	\begin{minipage}{0.22\textwidth}
 		\small
 		\centering
-		\begin{tikzpicture}[scale = 0.8]
+		\begin{tikzpicture}[scale = 0.7]
 			\node (t1) at (2,1) {L};
 			\node (t2) at (3,1) {H};
 			
@@ -1672,7 +1627,7 @@ unassociated tone and an unassociated mora (Figure~\ref{new.assoc3}).
 	\begin{minipage}{0.22\textwidth}
 		\small		
 		\centering
-		\begin{tikzpicture}[scale = 0.8]
+		\begin{tikzpicture}[scale = 0.7]
 			\node (t1) at (2,1) {L};
 			\node (t2) at (3,1) {\textbf{H}};
 			
@@ -1709,7 +1664,7 @@ unassociated tone and an unassociated mora (Figure~\ref{new.assoc3}).
 \begin{minipage}{0.23\textwidth}
 			\small
 		\centering
-		\begin{tikzpicture}[scale = 0.8]
+		\begin{tikzpicture}[scale = 0.7]
 			\node (t1) at (2,1) {\textbf{L}};
 			\node (t2) at (3,1) {H};
 			
@@ -1744,7 +1699,7 @@ unassociated tone and an unassociated mora (Figure~\ref{new.assoc3}).
 \begin{minipage}{0.23\textwidth}
 			\small
 		\centering
-		\begin{tikzpicture}[scale = 0.8]
+		\begin{tikzpicture}[scale = 0.7]
 			\node (t1) at (2,1) {L};
 			\node (t2) at (3,1) {\textbf{H}};
 			
@@ -1828,6 +1783,7 @@ WFC 1 and 2.
 
 \begin{figure}
 	\centering	
+	\setlength{\tabcolsep}{5pt}
 	\begin{minipage}[t]{0.32\textwidth}
 		\centering
 		\begin{tikzpicture}[scale=0.8]
@@ -1845,7 +1801,9 @@ WFC 1 and 2.
 			\draw (s2) -- (c3);
 			\draw[dotted, line width=0.4mm] (c1) to (t2);
 		\end{tikzpicture}
+		
 		\vspace{0.8em}
+		
 		\begin{tabular}{c|cc}
 			& L & H \\
 			\hline
@@ -1875,7 +1833,9 @@ WFC 1 and 2.
 			\draw (s2) -- (c3);
 			\draw[dotted, line width=0.4mm] (c4) to (t2);
 		\end{tikzpicture}
+
 		\vspace{0.8em}
+		
 		\begin{tabular}{c|cc}
 			& L & H \\
 			\hline
@@ -1908,7 +1868,7 @@ WFC 1 and 2.
 			\draw[dotted, line width=0.4mm] (c3) to (t3);
 		\end{tikzpicture}
 		
-		\vspace{0.3em}
+		\vspace{0.8em}
 		
 		\begin{tabular}{c|ccc}
 			& L & 	\cellcolor{gray!30}H & L \\
@@ -2100,10 +2060,124 @@ Figure~\ref{fig:matrixmatching} illustrates this procedure:
 whereas (\subref{fig:matrix-heavy}) is contained in (\subref{fig:matrix-super}) since the 
 submatrix in (\subref{fig:matrix-super}) (the shaded cells) matches matrices of 
 (\subref{fig:matrix-heavy}), in terms of associations
-as well as tonal strings, but does not match those of (\subref{fig:matrix-light}).
-
-
-%\input{fig.matrixmatching.tex}
+as well as tonal strings, but does not match those of (\subref{fig:matrix-light}).
+\begin{figure}[ht]
+\centering 
+\setlength{\tabcolsep}{5pt}
+% --- Block (a) ---
+	\begin{subfigure}[t]{0.25\textwidth}
+		\centering
+		\begin{tikzpicture}[scale = 0.9]
+			\node (bt1) at (1,1) {L};
+			\node (bt2) at (2,1) {H};
+			\node (bc1) at (1.5,0) {$\mu_1$};
+			\node (bs1) at (1.5,-1) {$\sigma_1$};
+			\draw (bt1) -- (bc1) -- (bs1);
+			\draw (bt2) -- (bc1) -- (bs1);
+			
+			% Array 1 (b)
+			\node (barray1) at (1.5,-2.5) {
+			  \begin{tabular}{c|cc}
+			    & L & H \\
+			    \hline
+			    $\mu_1$ & 1 & 1
+			  \end{tabular}
+			};
+			
+			% Array 2 (b)
+			\node (barray2) at (1.5, -4.2) {
+				\begin{tabular}{c|c}
+					& $\mu_1$ \\
+					\hline
+					$\sigma_1$ & 1  
+				\end{tabular}
+				};
+		\end{tikzpicture}
+		\subcaption{}
+		\label{fig:matrix-light}
+	\end{subfigure}
+	\hfill
+	% --- Block (B) ---
+	\begin{subfigure}[t]{0.25\textwidth}
+		\centering
+		\begin{tikzpicture}[scale = 0.9]
+			\node (ct1) at (1,1) {L};
+			\node (ct2) at (2,1) {H};
+			\node (cc1) at (1,0) {$\mu_1$};
+			\node (cc2) at (2,0) {$\mu_2$};
+			\node (cs1) at (1.5,-1) {$\sigma_2$};
+			\draw (ct1) -- (cc1) -- (cs1);
+			\draw (ct2) -- (cc2) -- (cs1);
+			
+			% Array 1
+			\node (carray1) at (1.5, -2.5) {
+				\begin{tabular}{c|cc}
+					& L & H \\
+					\hline
+					$\mu_1$ & 1 & 0 \\
+					$\mu_2$ & 0 & 1 
+				\end{tabular}
+				};
+			
+			% Array 2 
+			\node (carray2) at (1.5, -4.2) {				
+			\begin{tabular}{c|cc}
+					& $\mu_1$ & $\mu_2$ \\
+					\hline
+					$\sigma_1$ & 1  & 1
+				\end{tabular}};
+		\end{tikzpicture}
+		\subcaption{}
+		\label{fig:matrix-heavy}
+	\end{subfigure}
+	\hfill
+	% --- Block (C) ---
+	\begin{subfigure}[t]{0.3\textwidth}
+		\centering
+		\begin{tikzpicture}[scale = 0.9]
+			\node (dt0) at (0,1) {H};
+			\node (dt1) at (1,1) {L};
+			\node (dt2) at (2,1) {H};
+			\node (dc0) at (0,0) {$\mu_1$};
+			\node (dc1) at (1,0) {$\mu_2$};
+			\node (dc2) at (2,0) {$\mu_3$};
+			\node (ds0) at (0,-1) {$\sigma_1$};
+			\node (ds1) at (1.5,-1) {$\sigma_2$};
+			\draw (dt1) -- (dc1) -- (ds1);
+			\draw (dt0) -- (dc0) -- (ds0);
+			\draw (dt2) -- (dc2) -- (ds1);
+			\draw (dt1) -- (dc0);
+			
+			% Array 1 (c)
+			\node (darray1) at (1, -2.5) {
+				\begin{tabular}{c|c>{\columncolor[gray]{0.9}}c>{\columncolor[gray]{0.9}}c}
+					& H & L & H \\
+					\hline
+				$\mu_1$ & 1	&	1 & 0 \\
+				$\mu_2$ & 0 & \cellcolor{gray!50}1 & \cellcolor{gray!50}0\\
+				$\mu_3$ &0 &\cellcolor{gray!50}0&\cellcolor{gray!50}1\\
+				\end{tabular}
+				};
+			
+			% Array 2 (c)
+			\node (darray2) at (1, -4.5) {
+					\begin{tabular}
+						{c|c>{\columncolor[gray]{0.9}}c>{\columncolor[gray]{0.9}}c}
+					& $\mu_1$ & $\mu_2$ & $\mu_3$\\
+					\hline
+					$\sigma_1$ & 1 & 0 & 0\\
+					$\sigma_2$ & 0 &  \cellcolor{gray!50} 1 & \cellcolor{gray!50} 1\\
+				\end{tabular}
+				};
+		\end{tikzpicture}
+		\subcaption{}
+		\label{fig:matrix-super}
+	\end{subfigure}
+	\hfill
+	\caption{Light LH (11a), heavy LH (11b), 
+	and a superfactor of heavy LH (11c)}
+	\label{fig:matrixmatching}
+\end{figure}
 
 
 \subsection{Summary}
@@ -2294,12 +2368,11 @@ distinct AR types were identified among the 621 words, which serve as
 the positive dataset on which BUFIA-AR operates.
 \begin{table}[ht]
 	\centering
-	
 	\begin{tabular}{
 			>{\centering\arraybackslash}m{1.2cm}|
 			>{\centering\arraybackslash}m{1cm}|
 			>{\centering\arraybackslash}m{3.2cm}|
-			>{\centering\arraybackslash}m{4.5cm}
+			>{\centering\arraybackslash}m{5cm}
 		}
 		\toprule
 		\textbf{Form} &
@@ -2330,26 +2403,24 @@ the positive dataset on which BUFIA-AR operates.
 		\end{tikzpicture}
 		&
 		\[
-		\begin{array}{c|cc}
-			& L & H\\
+		\begin{array}{c|cc}			
+		& \text{ L } & \text{ H }\\
 			\hline
 			\mu_1 & 1 & 0\\
 			\mu_2 & 1 & 0\\
 			\mu_3 & 0 & 1\\
 			\mu_4 & 0 & 1
-		\end{array} 
-		\quad 
+		\end{array}
+		\quad
 		\begin{array}{c|cccc}
-			& \mu_1 & \mu_2 & \mu_3 & \mu_4\\
+			& \,\mu_1\, &\,\mu_2 \,& \,\mu_3\, &\, \mu_4\,\\
 			\hline
 			\sigma_1 & 1 & 1 & 0 & 0\\
 			\sigma_2 & 0 & 0 & 1 & 1
 		\end{array}
 		\]
 		\\
-		
-		\midrule
-		
+		\midrule		
 		\makecell{\textit{mù.tûm}\\`person'}
 		&
 		LF
@@ -2373,7 +2444,7 @@ the positive dataset on which BUFIA-AR operates.
 		&
 		\[
 		\begin{array}{c|ccc}
-			& L & H & L\\
+			& \text{ L } & \text{ H } & \text{ L }\\
 			\hline
 			\mu_1 & 1 & 0 & 0\\
 			\mu_2 & 0 & 1 & 0\\
@@ -2381,7 +2452,7 @@ the positive dataset on which BUFIA-AR operates.
 		\end{array}
 		\quad
 		\begin{array}{c|ccc}
-			& \mu_1 & \mu_2 & \mu_3\\
+			& \,\mu_1\, &\,\mu_2 \,& \,\mu_3\,\\
 			\hline
 			\sigma_1 & 1 & 0 & 0\\
 			\sigma_2 & 0 & 1 & 1
